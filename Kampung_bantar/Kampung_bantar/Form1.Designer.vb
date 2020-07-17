@@ -24,41 +24,25 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox
         Me.Label2 = New System.Windows.Forms.Label
-        Me.Label4 = New System.Windows.Forms.Label
         Me.Label1 = New System.Windows.Forms.Label
-        Me.Label3 = New System.Windows.Forms.Label
         Me.Button3 = New System.Windows.Forms.Button
-        Me.Panel3 = New System.Windows.Forms.Panel
-        Me.Label5 = New System.Windows.Forms.Label
         Me.Button2 = New System.Windows.Forms.Button
         Me.Button1 = New System.Windows.Forms.Button
-        Me.Panel2 = New System.Windows.Forms.Panel
         Me.Panel1 = New System.Windows.Forms.Panel
+        Me.Panel2 = New System.Windows.Forms.Panel
+        Me.Label5 = New System.Windows.Forms.Label
         Me.CheckBox1 = New System.Windows.Forms.CheckBox
         Me.txt_user = New System.Windows.Forms.TextBox
         Me.txt_pass = New System.Windows.Forms.TextBox
         Me.PictureBox2 = New System.Windows.Forms.PictureBox
         Me.PictureBox1 = New System.Windows.Forms.PictureBox
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel3.SuspendLayout()
-        Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(12, 4)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(63, 70)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 6
-        Me.PictureBox3.TabStop = False
         '
         'Label2
         '
@@ -70,17 +54,6 @@ Partial Class Form1
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Sign in to start your session"
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Rockwell Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(213, 31)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(349, 22)
-        Me.Label4.TabIndex = 0
-        Me.Label4.Text = "Rumah Sakit Umum Daerah Nurdin Hamzah"
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -89,24 +62,13 @@ Partial Class Form1
         Me.Label1.Size = New System.Drawing.Size(0, 13)
         Me.Label1.TabIndex = 4
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Rockwell Condensed", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(140, 9)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(515, 22)
-        Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Selamat Datang Di Sistem Pendukung Keputusan Perawat Terbaik"
-        '
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.Red
         Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.ForeColor = System.Drawing.Color.Black
         Me.Button3.Location = New System.Drawing.Point(46, 263)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(247, 36)
@@ -114,29 +76,9 @@ Partial Class Form1
         Me.Button3.Text = "Exit"
         Me.Button3.UseVisualStyleBackColor = False
         '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Panel3.Controls.Add(Me.Label5)
-        Me.Panel3.Location = New System.Drawing.Point(-5, 484)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(780, 42)
-        Me.Panel3.TabIndex = 7
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Rockwell Condensed", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.SystemColors.MenuHighlight
-        Me.Label5.Location = New System.Drawing.Point(171, 13)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(476, 19)
-        Me.Label5.TabIndex = 0
-        Me.Label5.Text = "Rumah Sakit Umum Daerah Nurdin Hamzah Tanjung Jabung Timur      "
-        '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.Blue
+        Me.Button2.BackColor = System.Drawing.Color.DodgerBlue
         Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -162,21 +104,11 @@ Partial Class Form1
         Me.Button1.Text = "Sign In"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.PictureBox3)
-        Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Location = New System.Drawing.Point(-5, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(771, 76)
-        Me.Panel2.TabIndex = 6
-        '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.Highlight
+        Me.Panel1.BackColor = System.Drawing.Color.DarkOrchid
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Button3)
@@ -186,10 +118,29 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.txt_user)
         Me.Panel1.Controls.Add(Me.txt_pass)
         Me.Panel1.Controls.Add(Me.PictureBox2)
-        Me.Panel1.Location = New System.Drawing.Point(223, 98)
+        Me.Panel1.Location = New System.Drawing.Point(-2, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(334, 350)
+        Me.Panel1.Size = New System.Drawing.Size(334, 365)
         Me.Panel1.TabIndex = 5
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.DarkOrchid
+        Me.Panel2.Controls.Add(Me.Label5)
+        Me.Panel2.Location = New System.Drawing.Point(-2, 343)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(329, 19)
+        Me.Panel2.TabIndex = 6
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.ForeColor = System.Drawing.Color.Yellow
+        Me.Label5.Location = New System.Drawing.Point(25, 4)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(295, 13)
+        Me.Label5.TabIndex = 0
+        Me.Label5.Text = "APLIKASI PENILAIAN KAMPUNG BANTAR KOTA JAMBI    "
         '
         'CheckBox1
         '
@@ -221,9 +172,9 @@ Partial Class Form1
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(123, 4)
+        Me.PictureBox2.Location = New System.Drawing.Point(133, 3)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(84, 75)
+        Me.PictureBox2.Size = New System.Drawing.Size(65, 75)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 2
         Me.PictureBox2.TabStop = False
@@ -235,7 +186,7 @@ Partial Class Form1
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(771, 526)
+        Me.PictureBox1.Size = New System.Drawing.Size(328, 364)
         Me.PictureBox1.TabIndex = 4
         Me.PictureBox1.TabStop = False
         '
@@ -248,37 +199,29 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(771, 526)
-        Me.Controls.Add(Me.Panel3)
-        Me.Controls.Add(Me.Panel2)
+        Me.ClientSize = New System.Drawing.Size(328, 364)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox1)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form1"
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
+        Me.Text = "Login User"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Panel3 As System.Windows.Forms.Panel
-    Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents txt_user As System.Windows.Forms.TextBox
@@ -286,5 +229,7 @@ Partial Class Form1
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 
 End Class
