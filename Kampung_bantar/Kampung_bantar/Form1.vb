@@ -59,7 +59,7 @@ Public Class Form1
             bersih()
         Else
             rd.Close()
-            MessageBox.Show("Login Gagal, Username Dan Password Salah", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            MessageBox.Show("Login gagal, username dan password tidak valid atau user sudah tidak aktif, hubungi administrator", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             txt_user.Text = ""
             txt_pass.Text = ""
             txt_user.Focus()

@@ -27,4 +27,14 @@
         Me.Close()
         Form1.Show()
     End Sub
+
+    Private Sub Panel4_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Panel4.Click
+        Me.Close()
+        Alternatif.Show()
+    End Sub
+
+    Private Sub PictureBox2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox2.Click
+        Me.Close()
+        Alternatif.Show()
+    End Sub
 End Class

@@ -67,6 +67,18 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alternatif.Designer.vb">
+      <DependentUpon>Alternatif.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Alternatif.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KategoriPenilaian.Designer.vb">
+      <DependentUpon>KategoriPenilaian.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KategoriPenilaian.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -104,11 +116,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Alternatif.resx">
+      <DependentUpon>Alternatif.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Copy of Alternatif.resx">
+      <DependentUpon>KategoriPenilaian.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kampung.resx">
       <DependentUpon>Kampung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KategoriPenilaian.resx">
+      <DependentUpon>KategoriPenilaian.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuUtama.resx">
       <DependentUpon>MenuUtama.vb</DependentUpon>

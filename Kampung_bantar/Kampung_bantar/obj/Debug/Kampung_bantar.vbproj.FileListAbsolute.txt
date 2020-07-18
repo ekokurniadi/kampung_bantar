@@ -10,3 +10,5 @@ D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Debug\
 D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Debug\Kampung_bantar.pdb
 D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Debug\Kampung_bantar.MenuUtama.resources
 D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Debug\Kampung_bantar.Kampung.resources
+D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Debug\Kampung_bantar.Alternatif.resources
+D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Debug\Kampung_bantar.KategoriPenilaian.resources
