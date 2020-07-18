@@ -33,6 +33,7 @@ Public Class Rating_pencocokan
         Call list_kriteria()
         DataGridView1.Columns.Add("Bobot", "Bobot")
         DataGridView1.Columns.Add("Nilai Kepentingan", "Nilai")
+        DataGridView1.Columns.Add("Kode Penilaian", "Nilai")
         DataGridView1.Columns(5).Visible = False
         DataGridView1.Columns(6).Visible = False
     End Sub
