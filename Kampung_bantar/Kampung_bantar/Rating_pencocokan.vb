@@ -34,6 +34,7 @@ Public Class Rating_pencocokan
         DataGridView1.Columns.Add("Bobot", "Bobot")
         DataGridView1.Columns.Add("Nilai Kepentingan", "Nilai")
         DataGridView1.Columns(5).Visible = False
+        DataGridView1.Columns(6).Visible = False
     End Sub
 
     Sub list_kriteria()
@@ -85,6 +86,7 @@ Public Class Rating_pencocokan
             If rd.HasRows Then
                 DataGridView1.Rows(e.RowIndex).Cells(2).Value = rd.Item(2)
                 DataGridView1.Rows(e.RowIndex).Cells(5).Value = rd.Item(4)
+                DataGridView1.Rows(e.RowIndex).Cells(6).Value = rd.Item(0)
             Else
                 MsgBox("Kode tidak terdaftar")
             End If
@@ -123,12 +125,14 @@ Public Class Rating_pencocokan
         End If
         For baris As Integer = 0 To DataGridView1.Rows.Count - 2
             'simpan ke tabel detail
-            Dim simpanmaster As String = "insert into rating_kecocokan_detail values('""','" & txt_kode.Text & "','" & DataGridView1.Rows(baris).Cells(0).Value.Substring(0, 6) & "','" & DataGridView1.Rows(baris).Cells(3).Value.Substring(0, 6) & "','" & DataGridView1.Rows(baris).Cells(4).Value & "','" & DataGridView1.Rows(baris).Cells(5).Value & "')"
+            Dim simpanmaster As String = "insert into rating_kecocokan_detail values('""','" & txt_kode.Text & "','" & DataGridView1.Rows(baris).Cells(0).Value.Substring(0, 6) & "','" & DataGridView1.Rows(baris).Cells(3).Value.Substring(0, 6) & "','" & DataGridView1.Rows(baris).Cells(4).Value & "','" & DataGridView1.Rows(baris).Cells(5).Value & "','" & DataGridView1.Rows(baris).Cells(6).Value & "')"
             cmd = New MySqlCommand(simpanmaster, conn)
             cmd.ExecuteNonQuery()
             rd.Close()
         Next baris
         MsgBox("Data Berhasil disimpan")
+        Normalisasi.Show()
+        Normalisasi.TextBox1.Text = txt_kode.Text
         rd.Close()
         DataGridView1.Columns.Clear()
         Call kolombaru()
