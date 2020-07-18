@@ -39,6 +39,9 @@ Partial Class Variabel_penilaian
         Me.txt_kepentingan = New System.Windows.Forms.TextBox
         Me.Label6 = New System.Windows.Forms.Label
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView
+        Me.Label9 = New System.Windows.Forms.Label
+        Me.cmb_kat = New System.Windows.Forms.ComboBox
         Me.Button7 = New System.Windows.Forms.Button
         Me.txt_kode = New System.Windows.Forms.TextBox
         Me.Button4 = New System.Windows.Forms.Button
@@ -48,34 +51,31 @@ Partial Class Variabel_penilaian
         Me.dgvkampung = New System.Windows.Forms.DataGridView
         Me.Label4 = New System.Windows.Forms.Label
         Me.Label2 = New System.Windows.Forms.Label
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox
+        Me.Button1 = New System.Windows.Forms.Button
+        Me.txt_bobot = New System.Windows.Forms.TextBox
+        Me.txt_kriteria = New System.Windows.Forms.RichTextBox
+        Me.RichTextBox3 = New System.Windows.Forms.RichTextBox
+        Me.txt_variabel = New System.Windows.Forms.RichTextBox
+        Me.Label13 = New System.Windows.Forms.Label
+        Me.Label12 = New System.Windows.Forms.Label
+        Me.Label11 = New System.Windows.Forms.Label
+        Me.Label10 = New System.Windows.Forms.Label
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel3 = New System.Windows.Forms.Panel
         Me.Label5 = New System.Windows.Forms.Label
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel
-        Me.cmb_kat = New System.Windows.Forms.ComboBox
-        Me.Label9 = New System.Windows.Forms.Label
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView
-        Me.Label10 = New System.Windows.Forms.Label
-        Me.Label11 = New System.Windows.Forms.Label
-        Me.Label12 = New System.Windows.Forms.Label
-        Me.Label13 = New System.Windows.Forms.Label
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox
-        Me.txt_variabel = New System.Windows.Forms.RichTextBox
-        Me.RichTextBox3 = New System.Windows.Forms.RichTextBox
-        Me.txt_kriteria = New System.Windows.Forms.RichTextBox
-        Me.txt_bobot = New System.Windows.Forms.TextBox
-        Me.Button1 = New System.Windows.Forms.Button
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvkampung, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel2
@@ -248,6 +248,35 @@ Partial Class Variabel_penilaian
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(15, 341)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(679, 163)
+        Me.DataGridView1.TabIndex = 44
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.Black
+        Me.Label9.Location = New System.Drawing.Point(503, 14)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(92, 15)
+        Me.Label9.TabIndex = 43
+        Me.Label9.Text = "Pencarian Data"
+        '
+        'cmb_kat
+        '
+        Me.cmb_kat.FormattingEnabled = True
+        Me.cmb_kat.Location = New System.Drawing.Point(149, 75)
+        Me.cmb_kat.Name = "cmb_kat"
+        Me.cmb_kat.Size = New System.Drawing.Size(186, 21)
+        Me.cmb_kat.TabIndex = 42
+        '
         'Button7
         '
         Me.Button7.BackColor = System.Drawing.Color.White
@@ -363,6 +392,110 @@ Partial Class Variabel_penilaian
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Kode Variabel"
         '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.Button1)
+        Me.GroupBox2.Controls.Add(Me.txt_bobot)
+        Me.GroupBox2.Controls.Add(Me.txt_kriteria)
+        Me.GroupBox2.Controls.Add(Me.RichTextBox3)
+        Me.GroupBox2.Controls.Add(Me.txt_variabel)
+        Me.GroupBox2.Controls.Add(Me.Label13)
+        Me.GroupBox2.Controls.Add(Me.Label12)
+        Me.GroupBox2.Controls.Add(Me.Label11)
+        Me.GroupBox2.Controls.Add(Me.Label10)
+        Me.GroupBox2.Location = New System.Drawing.Point(5, 253)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(700, 257)
+        Me.GroupBox2.TabIndex = 49
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Detail Penilaian"
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.White
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Blue
+        Me.Button1.Location = New System.Drawing.Point(646, 35)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(24, 28)
+        Me.Button1.TabIndex = 50
+        Me.Button1.Text = "+"
+        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'txt_bobot
+        '
+        Me.txt_bobot.Location = New System.Drawing.Point(590, 42)
+        Me.txt_bobot.Name = "txt_bobot"
+        Me.txt_bobot.Size = New System.Drawing.Size(40, 20)
+        Me.txt_bobot.TabIndex = 51
+        '
+        'txt_kriteria
+        '
+        Me.txt_kriteria.Location = New System.Drawing.Point(276, 42)
+        Me.txt_kriteria.Name = "txt_kriteria"
+        Me.txt_kriteria.Size = New System.Drawing.Size(293, 24)
+        Me.txt_kriteria.TabIndex = 50
+        Me.txt_kriteria.Text = ""
+        '
+        'RichTextBox3
+        '
+        Me.RichTextBox3.Location = New System.Drawing.Point(204, 116)
+        Me.RichTextBox3.Name = "RichTextBox3"
+        Me.RichTextBox3.Size = New System.Drawing.Size(293, 24)
+        Me.RichTextBox3.TabIndex = 50
+        Me.RichTextBox3.Text = ""
+        '
+        'txt_variabel
+        '
+        Me.txt_variabel.Location = New System.Drawing.Point(20, 42)
+        Me.txt_variabel.Name = "txt_variabel"
+        Me.txt_variabel.Size = New System.Drawing.Size(250, 24)
+        Me.txt_variabel.TabIndex = 49
+        Me.txt_variabel.Text = ""
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label13.Location = New System.Drawing.Point(643, 19)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(27, 13)
+        Me.Label13.TabIndex = 48
+        Me.Label13.Text = "Aksi"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label12.Location = New System.Drawing.Point(587, 19)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(35, 13)
+        Me.Label12.TabIndex = 47
+        Me.Label12.Text = "Bobot"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label11.Location = New System.Drawing.Point(282, 19)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(39, 13)
+        Me.Label11.TabIndex = 46
+        Me.Label11.Text = "Kriteria"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label10.Location = New System.Drawing.Point(15, 19)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(91, 13)
+        Me.Label10.TabIndex = 45
+        Me.Label10.Text = "Variabel Penilaian"
+        '
         'Timer1
         '
         Me.Timer1.Enabled = True
@@ -403,143 +536,11 @@ Partial Class Variabel_penilaian
         Me.Panel1.Size = New System.Drawing.Size(1056, 558)
         Me.Panel1.TabIndex = 28
         '
-        'cmb_kat
-        '
-        Me.cmb_kat.FormattingEnabled = True
-        Me.cmb_kat.Location = New System.Drawing.Point(149, 75)
-        Me.cmb_kat.Name = "cmb_kat"
-        Me.cmb_kat.Size = New System.Drawing.Size(186, 21)
-        Me.cmb_kat.TabIndex = 42
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(503, 14)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(92, 15)
-        Me.Label9.TabIndex = 43
-        Me.Label9.Text = "Pencarian Data"
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(15, 341)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(679, 163)
-        Me.DataGridView1.TabIndex = 44
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label10.Location = New System.Drawing.Point(15, 19)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(91, 13)
-        Me.Label10.TabIndex = 45
-        Me.Label10.Text = "Variabel Penilaian"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label11.Location = New System.Drawing.Point(282, 19)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(39, 13)
-        Me.Label11.TabIndex = 46
-        Me.Label11.Text = "Kriteria"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label12.Location = New System.Drawing.Point(587, 19)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(35, 13)
-        Me.Label12.TabIndex = 47
-        Me.Label12.Text = "Bobot"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label13.Location = New System.Drawing.Point(643, 19)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(27, 13)
-        Me.Label13.TabIndex = 48
-        Me.Label13.Text = "Aksi"
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.Button1)
-        Me.GroupBox2.Controls.Add(Me.txt_bobot)
-        Me.GroupBox2.Controls.Add(Me.txt_kriteria)
-        Me.GroupBox2.Controls.Add(Me.RichTextBox3)
-        Me.GroupBox2.Controls.Add(Me.txt_variabel)
-        Me.GroupBox2.Controls.Add(Me.Label13)
-        Me.GroupBox2.Controls.Add(Me.Label12)
-        Me.GroupBox2.Controls.Add(Me.Label11)
-        Me.GroupBox2.Controls.Add(Me.Label10)
-        Me.GroupBox2.Location = New System.Drawing.Point(5, 253)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(700, 257)
-        Me.GroupBox2.TabIndex = 49
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Detail Penilaian"
-        '
-        'txt_variabel
-        '
-        Me.txt_variabel.Location = New System.Drawing.Point(20, 42)
-        Me.txt_variabel.Name = "txt_variabel"
-        Me.txt_variabel.Size = New System.Drawing.Size(250, 24)
-        Me.txt_variabel.TabIndex = 49
-        Me.txt_variabel.Text = ""
-        '
-        'RichTextBox3
-        '
-        Me.RichTextBox3.Location = New System.Drawing.Point(204, 116)
-        Me.RichTextBox3.Name = "RichTextBox3"
-        Me.RichTextBox3.Size = New System.Drawing.Size(293, 24)
-        Me.RichTextBox3.TabIndex = 50
-        Me.RichTextBox3.Text = ""
-        '
-        'txt_kriteria
-        '
-        Me.txt_kriteria.Location = New System.Drawing.Point(276, 42)
-        Me.txt_kriteria.Name = "txt_kriteria"
-        Me.txt_kriteria.Size = New System.Drawing.Size(293, 24)
-        Me.txt_kriteria.TabIndex = 50
-        Me.txt_kriteria.Text = ""
-        '
-        'txt_bobot
-        '
-        Me.txt_bobot.Location = New System.Drawing.Point(590, 42)
-        Me.txt_bobot.Name = "txt_bobot"
-        Me.txt_bobot.Size = New System.Drawing.Size(40, 20)
-        Me.txt_bobot.TabIndex = 51
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.White
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.Blue
-        Me.Button1.Location = New System.Drawing.Point(646, 35)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(24, 28)
-        Me.Button1.TabIndex = 50
-        Me.Button1.Text = "+"
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
-        Me.Button1.UseVisualStyleBackColor = False
-        '
         'Variabel_penilaian
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1366, 745)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel3)
@@ -554,13 +555,13 @@ Partial Class Variabel_penilaian
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvkampung, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.Panel1.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
