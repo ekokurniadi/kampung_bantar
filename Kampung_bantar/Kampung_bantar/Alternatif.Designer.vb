@@ -31,6 +31,7 @@ Partial Class Alternatif
         Me.Label5 = New System.Windows.Forms.Label
         Me.Panel1 = New System.Windows.Forms.Panel
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox
         Me.Label6 = New System.Windows.Forms.Label
         Me.txt_cari = New System.Windows.Forms.TextBox
         Me.Button7 = New System.Windows.Forms.Button
@@ -49,7 +50,6 @@ Partial Class Alternatif
         Me.PictureBox3 = New System.Windows.Forms.PictureBox
         Me.Panel2 = New System.Windows.Forms.Panel
         Me.Label3 = New System.Windows.Forms.Label
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox
         Me.Panel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -130,6 +130,14 @@ Partial Class Alternatif
         Me.GroupBox1.Size = New System.Drawing.Size(1054, 510)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(148, 73)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(200, 21)
+        Me.ComboBox1.TabIndex = 40
         '
         'Label6
         '
@@ -261,9 +269,9 @@ Partial Class Alternatif
         Me.Label2.ForeColor = System.Drawing.Color.Black
         Me.Label2.Location = New System.Drawing.Point(26, 48)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(85, 15)
+        Me.Label2.Size = New System.Drawing.Size(86, 15)
         Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Kode Kategori"
+        Me.Label2.Text = "Kode Alternatif"
         '
         'Panel4
         '
@@ -340,15 +348,7 @@ Partial Class Alternatif
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Sistem Pendukung Keputusan Pemenang Lomba Kampung Bantar Kota Jambi"
         '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(148, 73)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(200, 21)
-        Me.ComboBox1.TabIndex = 40
-        '
-        'Kategori
+        'Alternatif
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -357,7 +357,7 @@ Partial Class Alternatif
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
-        Me.Name = "Kategori"
+        Me.Name = "Alternatif"
         Me.Text = "Kampung"
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()

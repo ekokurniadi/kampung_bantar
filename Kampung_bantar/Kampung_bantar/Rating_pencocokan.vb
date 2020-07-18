@@ -4,7 +4,26 @@ Public Class Rating_pencocokan
     Private Sub Rating_pencocokan_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         kolombaru()
     End Sub
-
+    Sub autonumber()
+        txt_kode.Enabled = False
+        Call koneksinya()
+        cmd = New MySqlCommand("select * from rating_kecocokan order by kode desc", conn)
+        rd = cmd.ExecuteReader
+        rd.Read()
+        If Not rd.HasRows Then
+            txt_kode.Text = "KP" + "0001"
+        Else
+            txt_kode.Text = Val(Microsoft.VisualBasic.Mid(rd.Item("kode").ToString, 4, 3)) + 1
+            If Len(txt_kode.Text) = 1 Then
+                txt_kode.Text = "KP000" & txt_kode.Text & ""
+            ElseIf Len(txt_kode.Text) = 2 Then
+                txt_kode.Text = "KP00" & txt_kode.Text & ""
+            ElseIf Len(txt_kode.Text) = 3 Then
+                txt_kode.Text = "KP0" & txt_kode.Text & ""
+            End If
+        End If
+        rd.Close()
+    End Sub
     Sub kolombaru()
         Call list_alternatif()
         Call list_kategori()
@@ -81,7 +100,6 @@ Public Class Rating_pencocokan
                 MsgBox("Kode tidak terdaftar")
             End If
         End If
-
         rd.Close()
     End Sub
 
