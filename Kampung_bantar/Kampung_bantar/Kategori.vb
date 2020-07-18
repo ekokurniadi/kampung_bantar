@@ -13,7 +13,6 @@ Public Class Kategori
         placeholder()
         autonumber()
         view()
-        ''initialCombobox()
     End Sub
     Sub bersih()
         placeholder()
