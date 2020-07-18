@@ -51,4 +51,19 @@
         Me.Close()
         Variabel_penilaian.Show()
     End Sub
+
+    Private Sub Panel8_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Panel8.Click
+        Me.Close()
+        Kategori.Show()
+    End Sub
+
+    Private Sub PictureBox12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox12.Click
+        Me.Close()
+        Kategori.Show()
+    End Sub
+
+    Private Sub Label9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label9.Click
+        Me.Close()
+        Kategori.Show()
+    End Sub
 End Class

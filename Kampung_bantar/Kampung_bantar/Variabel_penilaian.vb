@@ -79,6 +79,7 @@ Public Class Variabel_penilaian
                 view_detail()
                 MsgBox("Data Berhasil Disimpan")
                 bersih()
+
                 DataGridView1.DataSource = ds.Tables()
             Else
                 MsgBox("Gagal Menyimpan Data")
@@ -98,6 +99,7 @@ msg:    MsgBox("Opps, Something went wrong !!")
         txt_kriteria.Text = ""
         txt_bobot.Text = ""
         DataGridView1.DataSource = ds.Tables()
+        autonumber()
     End Sub
     Sub bersih2()
         txt_kriteria.Text = ""
