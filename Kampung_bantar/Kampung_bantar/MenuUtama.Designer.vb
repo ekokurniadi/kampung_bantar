@@ -103,9 +103,9 @@ Partial Class MenuUtama
         Me.Label8.ForeColor = System.Drawing.Color.Black
         Me.Label8.Location = New System.Drawing.Point(91, 60)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(60, 19)
+        Me.Label8.Size = New System.Drawing.Size(71, 19)
         Me.Label8.TabIndex = 6
-        Me.Label8.Text = "Kriteria"
+        Me.Label8.Text = "Penilaian"
         '
         'PictureBox6
         '

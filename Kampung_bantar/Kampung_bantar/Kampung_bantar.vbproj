@@ -26,6 +26,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>Kampung_bantar.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <WarningLevel>0</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -35,6 +36,7 @@
     <OutputPath>bin\Release\</OutputPath>
     <DocumentationFile>Kampung_bantar.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <WarningLevel>0</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data, Version=6.2.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
@@ -73,10 +75,10 @@
     <Compile Include="Alternatif.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KategoriPenilaian.Designer.vb">
-      <DependentUpon>KategoriPenilaian.vb</DependentUpon>
+    <Compile Include="Kategori.Designer.vb">
+      <DependentUpon>Kategori.vb</DependentUpon>
     </Compile>
-    <Compile Include="KategoriPenilaian.vb">
+    <Compile Include="Kategori.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.vb">
@@ -119,17 +121,14 @@
     <EmbeddedResource Include="Alternatif.resx">
       <DependentUpon>Alternatif.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Copy of Alternatif.resx">
-      <DependentUpon>KategoriPenilaian.vb</DependentUpon>
+    <EmbeddedResource Include="Kategori.resx">
+      <DependentUpon>Kategori.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kampung.resx">
       <DependentUpon>Kampung.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KategoriPenilaian.resx">
-      <DependentUpon>KategoriPenilaian.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuUtama.resx">
       <DependentUpon>MenuUtama.vb</DependentUpon>
