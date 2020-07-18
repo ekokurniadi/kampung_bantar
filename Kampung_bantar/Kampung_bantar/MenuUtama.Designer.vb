@@ -199,11 +199,12 @@ Partial Class MenuUtama
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Rockwell Condensed", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(91, 41)
+        Me.Label11.Location = New System.Drawing.Point(91, 20)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(60, 38)
+        Me.Label11.Size = New System.Drawing.Size(76, 95)
         Me.Label11.TabIndex = 7
-        Me.Label11.Text = "Master" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Kriteria"
+        Me.Label11.Text = "Variabel " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Penilaian " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "&& " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Kriteria" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label17
         '

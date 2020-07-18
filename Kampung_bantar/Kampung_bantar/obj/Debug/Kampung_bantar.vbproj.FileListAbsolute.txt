@@ -12,3 +12,4 @@ D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Debug\
 D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Debug\Kampung_bantar.Kampung.resources
 D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Debug\Kampung_bantar.Alternatif.resources
 D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Debug\Kampung_bantar.Kategori.resources
+D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Debug\Kampung_bantar.Variabel_penilaian.resources
