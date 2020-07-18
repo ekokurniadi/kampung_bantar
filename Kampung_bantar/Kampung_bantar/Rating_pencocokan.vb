@@ -3,23 +3,24 @@ Public Class Rating_pencocokan
 
     Private Sub Rating_pencocokan_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         kolombaru()
+        autonumber()
     End Sub
     Sub autonumber()
-        txt_kode.Enabled = False
+        txt_kode.ReadOnly = True
         Call koneksinya()
-        cmd = New MySqlCommand("select * from rating_kecocokan order by kode desc", conn)
+        cmd = New MySqlCommand("select * from rating_kecocokan order by kode_rating_kecocokan desc", conn)
         rd = cmd.ExecuteReader
         rd.Read()
         If Not rd.HasRows Then
-            txt_kode.Text = "KP" + "0001"
+            txt_kode.Text = "RK" + "0001"
         Else
-            txt_kode.Text = Val(Microsoft.VisualBasic.Mid(rd.Item("kode").ToString, 4, 3)) + 1
+            txt_kode.Text = Val(Microsoft.VisualBasic.Mid(rd.Item("kode_rating_kecocokan").ToString, 4, 3)) + 1
             If Len(txt_kode.Text) = 1 Then
-                txt_kode.Text = "KP000" & txt_kode.Text & ""
+                txt_kode.Text = "RK000" & txt_kode.Text & ""
             ElseIf Len(txt_kode.Text) = 2 Then
-                txt_kode.Text = "KP00" & txt_kode.Text & ""
+                txt_kode.Text = "RK00" & txt_kode.Text & ""
             ElseIf Len(txt_kode.Text) = 3 Then
-                txt_kode.Text = "KP0" & txt_kode.Text & ""
+                txt_kode.Text = "RK0" & txt_kode.Text & ""
             End If
         End If
         rd.Close()
@@ -31,6 +32,8 @@ Public Class Rating_pencocokan
         DataGridView1.Columns(2).Width = 300
         Call list_kriteria()
         DataGridView1.Columns.Add("Bobot", "Bobot")
+        DataGridView1.Columns.Add("Nilai Kepentingan", "Nilai")
+        DataGridView1.Columns(5).Visible = False
     End Sub
 
     Sub list_kriteria()
@@ -81,6 +84,7 @@ Public Class Rating_pencocokan
             rd.Read()
             If rd.HasRows Then
                 DataGridView1.Rows(e.RowIndex).Cells(2).Value = rd.Item(2)
+                DataGridView1.Rows(e.RowIndex).Cells(5).Value = rd.Item(4)
             Else
                 MsgBox("Kode tidak terdaftar")
             End If
@@ -103,4 +107,35 @@ Public Class Rating_pencocokan
         rd.Close()
     End Sub
 
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        If txt_kode.Text = "" Or DateTimePicker1.Text = "" Then
+            MsgBox("Data belum lengkap")
+            Exit Sub
+        End If
+        cmd = New MySqlCommand("select * from rating_kecocokan where kode_rating_kecocokan='" & txt_kode.Text & "'", conn)
+        rd = cmd.ExecuteReader
+        rd.Read()
+        If Not rd.HasRows Then
+            rd.Close()
+            Dim sqlsave As String = "insert into rating_kecocokan values('" & txt_kode.Text & "', '" & Format(DateTimePicker1.Value, "yyyy-MM-dd") & "')"
+            cmd = New MySqlCommand(sqlsave, conn)
+            cmd.ExecuteNonQuery()
+        End If
+        For baris As Integer = 0 To DataGridView1.Rows.Count - 2
+            'simpan ke tabel detail
+            Dim simpanmaster As String = "insert into rating_kecocokan_detail values('""','" & txt_kode.Text & "','" & DataGridView1.Rows(baris).Cells(0).Value.Substring(0, 6) & "','" & DataGridView1.Rows(baris).Cells(3).Value.Substring(0, 6) & "','" & DataGridView1.Rows(baris).Cells(4).Value & "','" & DataGridView1.Rows(baris).Cells(5).Value & "')"
+            cmd = New MySqlCommand(simpanmaster, conn)
+            cmd.ExecuteNonQuery()
+            rd.Close()
+        Next baris
+        MsgBox("Data Berhasil disimpan")
+        rd.Close()
+        DataGridView1.Columns.Clear()
+        Call kolombaru()
+        Call autonumber()
+        Call bersih()
+    End Sub
+    Sub bersih()
+        DateTimePicker1.Value = Now
+    End Sub
 End Class
