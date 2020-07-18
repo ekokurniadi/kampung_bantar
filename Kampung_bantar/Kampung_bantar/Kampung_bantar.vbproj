@@ -116,6 +116,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Rating_pencocokan.Designer.vb">
+      <DependentUpon>Rating_pencocokan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Rating_pencocokan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Variabel_penilaian.Designer.vb">
       <DependentUpon>Variabel_penilaian.vb</DependentUpon>
     </Compile>
@@ -144,6 +150,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rating_pencocokan.resx">
+      <DependentUpon>Rating_pencocokan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Variabel_penilaian.resx">
       <DependentUpon>Variabel_penilaian.vb</DependentUpon>

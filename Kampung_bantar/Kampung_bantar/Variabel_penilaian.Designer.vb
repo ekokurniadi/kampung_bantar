@@ -66,6 +66,7 @@ Partial Class Variabel_penilaian
         Me.Label5 = New System.Windows.Forms.Label
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel
+        Me.TextBox1 = New System.Windows.Forms.TextBox
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
@@ -403,6 +404,7 @@ Partial Class Variabel_penilaian
         Me.GroupBox2.Controls.Add(Me.Label12)
         Me.GroupBox2.Controls.Add(Me.Label11)
         Me.GroupBox2.Controls.Add(Me.Label10)
+        Me.GroupBox2.Controls.Add(Me.TextBox1)
         Me.GroupBox2.Location = New System.Drawing.Point(5, 253)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(700, 257)
@@ -536,6 +538,14 @@ Partial Class Variabel_penilaian
         Me.Panel1.Size = New System.Drawing.Size(1056, 558)
         Me.Panel1.TabIndex = 28
         '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(124, 10)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(125, 22)
+        Me.TextBox1.TabIndex = 50
+        '
         'Variabel_penilaian
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -607,4 +617,5 @@ Partial Class Variabel_penilaian
     Friend WithEvents RichTextBox3 As System.Windows.Forms.RichTextBox
     Friend WithEvents txt_variabel As System.Windows.Forms.RichTextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
 End Class

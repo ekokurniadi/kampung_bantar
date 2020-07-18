@@ -5,6 +5,7 @@ Public Class Variabel_penilaian
         Call koneksinya()
         placeholder()
         autonumber()
+        autonumber2()
         view()
         view_detail()
         initialCombobox()
@@ -47,6 +48,27 @@ Public Class Variabel_penilaian
                 txt_kode.Text = "VP00" & txt_kode.Text & ""
             ElseIf Len(txt_kode.Text) = 3 Then
                 txt_kode.Text = "VP0" & txt_kode.Text & ""
+            End If
+        End If
+        rd.Close()
+    End Sub
+
+    Sub autonumber2()
+        TextBox1.Enabled = False
+        Call koneksinya()
+        cmd = New MySqlCommand("select * from kriteria order by relasi desc", conn)
+        rd = cmd.ExecuteReader
+        rd.Read()
+        If Not rd.HasRows Then
+            TextBox1.Text = "RL" + "0001"
+        Else
+            TextBox1.Text = Val(Microsoft.VisualBasic.Mid(rd.Item("relasi").ToString, 4, 3)) + 1
+            If Len(TextBox1.Text) = 1 Then
+                TextBox1.Text = "RL000" & TextBox1.Text & ""
+            ElseIf Len(TextBox1.Text) = 2 Then
+                TextBox1.Text = "RL00" & TextBox1.Text & ""
+            ElseIf Len(txt_kode.Text) = 3 Then
+                TextBox1.Text = "RL0" & TextBox1.Text & ""
             End If
         End If
         rd.Close()
@@ -104,6 +126,7 @@ msg:    MsgBox("Opps, Something went wrong !!")
     Sub bersih2()
         txt_kriteria.Text = ""
         txt_bobot.Text = ""
+        autonumber2()
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -112,7 +135,7 @@ msg:    MsgBox("Opps, Something went wrong !!")
             MsgBox("Mohon Isi Dengan Lengkap")
             Exit Sub
         Else
-            Dim sqlsave As String = "insert into kriteria values('""','" & txt_kode.Text & "', '" & txt_variabel.Text & "','" & txt_kriteria.Text & "','" & txt_bobot.Text & "')"
+            Dim sqlsave As String = "insert into kriteria values('""','" & txt_kode.Text & "', '" & txt_variabel.Text & "','" & txt_kriteria.Text & "','" & txt_bobot.Text & "','" & TextBox1.Text & "')"
             rd.Close()
             cmd = New MySqlCommand(sqlsave, conn)
             cmd.ExecuteNonQuery()
