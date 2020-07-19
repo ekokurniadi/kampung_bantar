@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 18, 2020 at 10:46 AM
+-- Generation Time: Jul 19, 2020 at 02:53 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 5.6.32
 
@@ -105,9 +105,15 @@ CREATE TABLE `kriteria` (
 --
 
 INSERT INTO `kriteria` (`id_kriteria`, `kode_penilaian`, `variabel_penilaian`, `kriteria`, `bobot`, `relasi`) VALUES
-(19, 'VP0001', 'sdfadsf', 'ada', 2, 'RL0001'),
-(20, 'VP0001', 'sdfadsf', 'dfasdfaf', 1, 'RL0002'),
-(21, 'VP0001', 'sdfadsf', 'da', 0, 'RL0003');
+(22, 'VP0001', 'Tersedia nya Rumah layak huni (Atap,Lantai,Dinding) baik dan kuat', 'Ada', 2, 'RL0004'),
+(23, 'VP0001', 'Tersedia nya Rumah layak huni (Atap,Lantai,Dinding) baik dan kuat', 'Ada tapi tidak sempurna', 1, 'RL0005'),
+(24, 'VP0001', 'Tersedia nya Rumah layak huni (Atap,Lantai,Dinding) baik dan kuat', 'Tidak Lengkap', 0, 'RL0006'),
+(25, 'VP0001', 'Selokan rumah ada dan berfungsi', '100 %', 2, 'RL0007'),
+(26, 'VP0001', 'Selokan rumah ada dan berfungsi', '80-99 %', 1, 'RL0008'),
+(27, 'VP0001', 'Selokan rumah ada dan berfungsi', '1-79 %', 0, 'RL0009'),
+(28, 'VP0001', 'Rumah layak huni dikampung Bantar', '100 %', 2, 'RL0010'),
+(29, 'VP0001', 'Rumah layak huni dikampung Bantar', '80-99 %', 1, 'RL0011'),
+(30, 'VP0001', 'Rumah layak huni dikampung Bantar', '1-79 %', 0, 'RL0012');
 
 -- --------------------------------------------------------
 
@@ -120,6 +126,13 @@ CREATE TABLE `normalisasi` (
   `tanggal` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `normalisasi`
+--
+
+INSERT INTO `normalisasi` (`kode_normalisasi`, `tanggal`) VALUES
+('RK0001', '2020-07-19');
+
 -- --------------------------------------------------------
 
 --
@@ -130,10 +143,19 @@ CREATE TABLE `normalisasi_detail` (
   `id` int(11) NOT NULL,
   `kode_normalisasi` varchar(11) NOT NULL,
   `kode_alternatif` varchar(11) NOT NULL,
-  `id_kriteria` int(11) NOT NULL,
+  `variabel_penilaian` text NOT NULL,
   `kriteria` text NOT NULL,
-  `nilai_normalisasi` double NOT NULL DEFAULT '0'
+  `nilai_normalisasi` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `normalisasi_detail`
+--
+
+INSERT INTO `normalisasi_detail` (`id`, `kode_normalisasi`, `kode_alternatif`, `variabel_penilaian`, `kriteria`, `nilai_normalisasi`) VALUES
+(77, 'RK0001', 'AL0001', 'Tersedia nya Rumah layak huni (Atap,Lantai,Dinding) baik dan kuat', 'Ada tapi tidak sempurna', 1),
+(78, 'RK0001', 'AL0001', 'Selokan rumah ada dan berfungsi', '100 %', 2),
+(79, 'RK0001', 'AL0001', 'Rumah layak huni dikampung Bantar', '100 %', 2);
 
 -- --------------------------------------------------------
 
@@ -153,7 +175,8 @@ CREATE TABLE `pengguna` (
 --
 
 INSERT INTO `pengguna` (`id`, `username`, `password`, `aktif`) VALUES
-(1, 'admin', 'admin', 'aktif');
+(1, 'admin', 'admin', 'aktif'),
+(2, 'aulia', 'aulia', 'aktif');
 
 -- --------------------------------------------------------
 
@@ -174,7 +197,7 @@ CREATE TABLE `penilaian` (
 --
 
 INSERT INTO `penilaian` (`kode_penilaian`, `kategori`, `variabel_penilaian`, `kepentingan`, `nilai_kepentingan`) VALUES
-('VP0001', 'Kampung Bersih', 'Tersedia nya rumah layak huni', 'Sangat Tinggi', 1);
+('VP0001', 'Kampung Bersih', 'Memiliki Sarana dan Prasarana Pemukiman dan Perumahan sehat dan tertata rapi', 'Sangat Tinggi', 1);
 
 --
 -- Triggers `penilaian`
@@ -195,6 +218,13 @@ CREATE TABLE `perangkingan` (
   `tanggal` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `perangkingan`
+--
+
+INSERT INTO `perangkingan` (`kode_perangkingan`, `tanggal`) VALUES
+('RK0001', '2020-07-19');
+
 -- --------------------------------------------------------
 
 --
@@ -205,8 +235,16 @@ CREATE TABLE `perangkingan_detail` (
   `id` int(11) NOT NULL,
   `kode_perangkingan` varchar(11) NOT NULL,
   `kode_alternatif` varchar(11) NOT NULL,
-  `nilai_akhir` double NOT NULL DEFAULT '0'
+  `nilai_akhir` double NOT NULL DEFAULT '0',
+  `peringkat` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `perangkingan_detail`
+--
+
+INSERT INTO `perangkingan_detail` (`id`, `kode_perangkingan`, `kode_alternatif`, `nilai_akhir`, `peringkat`) VALUES
+(23, 'RK0001', 'AL0001', 5, 1);
 
 -- --------------------------------------------------------
 
@@ -216,8 +254,16 @@ CREATE TABLE `perangkingan_detail` (
 
 CREATE TABLE `rating_kecocokan` (
   `kode_rating_kecocokan` varchar(11) NOT NULL,
-  `tanggal_rating` date NOT NULL
+  `tanggal_rating` date NOT NULL,
+  `status` varchar(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `rating_kecocokan`
+--
+
+INSERT INTO `rating_kecocokan` (`kode_rating_kecocokan`, `tanggal_rating`, `status`) VALUES
+('RK0001', '2020-07-19', 'selesai');
 
 -- --------------------------------------------------------
 
@@ -230,9 +276,19 @@ CREATE TABLE `rating_kecocokan_detail` (
   `kode_rating_kecocokan` varchar(11) NOT NULL,
   `kode_alternatif` varchar(11) NOT NULL,
   `relasi_kriteria` varchar(11) NOT NULL,
-  `kriteria` text NOT NULL,
-  `bobot` double NOT NULL DEFAULT '0'
+  `bobot` double NOT NULL DEFAULT '0',
+  `nilai_kepentingan` double DEFAULT '0',
+  `kode_penilaian` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `rating_kecocokan_detail`
+--
+
+INSERT INTO `rating_kecocokan_detail` (`id`, `kode_rating_kecocokan`, `kode_alternatif`, `relasi_kriteria`, `bobot`, `nilai_kepentingan`, `kode_penilaian`) VALUES
+(12, 'RK0001', 'AL0001', 'RL0005', 1, 1, 'VP0001'),
+(13, 'RK0001', 'AL0001', 'RL0007', 2, 1, 'VP0001'),
+(14, 'RK0001', 'AL0001', 'RL0010', 2, 1, 'VP0001');
 
 --
 -- Indexes for dumped tables
@@ -324,19 +380,31 @@ ALTER TABLE `kategori_penilaian`
 -- AUTO_INCREMENT for table `kriteria`
 --
 ALTER TABLE `kriteria`
-  MODIFY `id_kriteria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_kriteria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
+-- AUTO_INCREMENT for table `normalisasi_detail`
+--
+ALTER TABLE `normalisasi_detail`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT for table `pengguna`
 --
 ALTER TABLE `pengguna`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `perangkingan_detail`
 --
 ALTER TABLE `perangkingan_detail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
+--
+-- AUTO_INCREMENT for table `rating_kecocokan_detail`
+--
+ALTER TABLE `rating_kecocokan_detail`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
