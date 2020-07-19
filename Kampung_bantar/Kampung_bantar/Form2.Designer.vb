@@ -27,6 +27,7 @@ Partial Class Form2
         Me.Button5 = New System.Windows.Forms.Button
         Me.Button2 = New System.Windows.Forms.Button
         Me.Panel1 = New System.Windows.Forms.Panel
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox
         Me.Button4 = New System.Windows.Forms.Button
         Me.Label1 = New System.Windows.Forms.Label
         Me.Button3 = New System.Windows.Forms.Button
@@ -37,7 +38,6 @@ Partial Class Form2
         Me.Panel2 = New System.Windows.Forms.Panel
         Me.PictureBox3 = New System.Windows.Forms.PictureBox
         Me.Label3 = New System.Windows.Forms.Label
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -102,6 +102,15 @@ Partial Class Form2
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(399, 350)
         Me.Panel1.TabIndex = 9
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"aktif", "non-aktif"})
+        Me.ComboBox1.Location = New System.Drawing.Point(81, 147)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(247, 21)
+        Me.ComboBox1.TabIndex = 9
         '
         'Button4
         '
@@ -209,14 +218,6 @@ Partial Class Form2
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Data Pengguna"
         '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(81, 147)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(247, 21)
-        Me.ComboBox1.TabIndex = 9
-        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -227,6 +228,7 @@ Partial Class Form2
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
         Me.Name = "Form2"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form2"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)

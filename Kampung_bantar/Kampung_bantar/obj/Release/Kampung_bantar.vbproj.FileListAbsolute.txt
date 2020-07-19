@@ -8,3 +8,11 @@ D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Releas
 D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Release\Kampung_bantar.Rating_pencocokan.resources
 D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Release\Kampung_bantar.Variabel_penilaian.resources
 D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Release\Kampung_bantar.vbproj.GenerateResource.Cache
+D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\bin\Release\Kampung_bantar.exe
+D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\bin\Release\Kampung_bantar.pdb
+D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\bin\Release\Kampung_bantar.xml
+D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Release\Kampung_bantar.Form1.resources
+D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Release\Kampung_bantar.Form2.resources
+D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Release\Kampung_bantar.exe
+D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Release\Kampung_bantar.xml
+D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Release\Kampung_bantar.pdb
