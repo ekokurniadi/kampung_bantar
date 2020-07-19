@@ -70,6 +70,7 @@ msg:    MsgBox("Opps, Something went wrong !!")
         txt_kelurahan.Text = ""
         TextBox1.Text = ""
         RichTextBox1.Text = ""
+
     End Sub
     Sub view()
         da = New MySqlDataAdapter("select a.kode,a.nama,a.alamat,concat(b.kode_kecamatan,' - ',b.kecamatan)as kecamatan,concat(c.kode_kelurahan,' - ',c.kelurahan)as kelurahan,a.rt as RT from kampung a join kecamatan b on a.kecamatan=b.kode_kecamatan join kelurahan c on c.kode_kelurahan=a.kelurahan ", conn)
