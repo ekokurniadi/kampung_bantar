@@ -67,7 +67,7 @@ Partial Class Form1
         '
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label5.ForeColor = System.Drawing.Color.Yellow
+        Me.Label5.ForeColor = System.Drawing.Color.SpringGreen
         Me.Label5.Location = New System.Drawing.Point(10, 410)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(309, 13)
