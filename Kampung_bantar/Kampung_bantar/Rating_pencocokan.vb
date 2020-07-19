@@ -5,6 +5,12 @@ Public Class Rating_pencocokan
         kolombaru()
         autonumber()
     End Sub
+    Sub atur_kolom()
+        DataGridView1.Columns(0).Width = 150
+        DataGridView1.Columns(1).Width = 600
+        DataGridView1.Columns(2).Width = 400
+        DataGridView1.Columns(3).Width = 500
+    End Sub
     Sub autonumber()
         txt_kode.ReadOnly = True
         Call koneksinya()
@@ -26,16 +32,17 @@ Public Class Rating_pencocokan
         rd.Close()
     End Sub
     Sub kolombaru()
+
         Call list_alternatif()
         Call list_kategori()
         DataGridView1.Columns.Add("Variabel Penilaian", "Variabel Penilaian")
-        DataGridView1.Columns(2).Width = 300
         Call list_kriteria()
         DataGridView1.Columns.Add("Bobot", "Bobot")
         DataGridView1.Columns.Add("Nilai Kepentingan", "Nilai")
         DataGridView1.Columns.Add("Kode Penilaian", "Nilai")
         DataGridView1.Columns(5).Visible = False
         DataGridView1.Columns(6).Visible = False
+        atur_kolom()
     End Sub
 
     Sub list_kriteria()
@@ -49,7 +56,7 @@ Public Class Rating_pencocokan
         cols.DisplayMember = "variabel_penilaian"
         DataGridView1.Columns.Add(cols)
         cols.HeaderText = "Pilih Kriteria"
-        cols.Width = 200
+
     End Sub
     Sub list_kategori()
         Call koneksinya()
@@ -62,7 +69,7 @@ Public Class Rating_pencocokan
         cols.DisplayMember = "kat"
         DataGridView1.Columns.Add(cols)
         cols.HeaderText = "Pilih Kategori"
-        cols.Width = 400
+
     End Sub
     Sub list_alternatif()
         Call koneksinya()
@@ -75,7 +82,7 @@ Public Class Rating_pencocokan
         cols.DisplayMember = "kode_alternatif"
         DataGridView1.Columns.Add(cols)
         cols.HeaderText = "Pilih Peserta"
-        cols.Width = 200
+
     End Sub
     Private Sub DataGridView1_CellEndEdit(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellEndEdit
         On Error Resume Next
@@ -146,10 +153,14 @@ Public Class Rating_pencocokan
     End Sub
 
     Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
-
+        Me.Close()
+        MenuUtama.Show()
     End Sub
 
-    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+        DataGridView1.Columns.Clear()
+        Call kolombaru()
+        Call autonumber()
+        Call bersih()
     End Sub
 End Class

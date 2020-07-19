@@ -7,6 +7,8 @@ Module Module1
     Public cmd As MySqlCommand
     Public cmd2 As MySqlCommand
     Public cmd3 As MySqlCommand
+    Public cmd4 As MySqlCommand
+    Public cmd5 As MySqlCommand
     Public rd As MySqlDataReader
     Public str As String
     Public Sub koneksinya()

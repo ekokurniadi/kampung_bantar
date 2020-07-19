@@ -165,9 +165,9 @@ pesan:  MsgBox("Opps, Something went wrong !!")
     End Sub
 
     Private Sub DataGridView1_Click(ByVal sender As Object, ByVal e As EventArgs) Handles DataGridView1.Click
-        If MsgBox("anda yakin ingin menghapus obat ini?", MsgBoxStyle.Question + MsgBoxStyle.OkCancel, "pesan") = MsgBoxResult.Ok Then
+        If MsgBox("anda yakin ingin menghapus data ini?", MsgBoxStyle.Question + MsgBoxStyle.OkCancel, "pesan") = MsgBoxResult.Ok Then
             cmd = New MySqlCommand _
-          ("delete from kriteria where id = '" & DataGridView1.SelectedCells(0).Value & "'", conn)
+          ("delete from kriteria where id_kriteria = '" & DataGridView1.SelectedCells(0).Value & "'", conn)
             cmd.ExecuteNonQuery()
             MsgBox("Berhasil Hapus")
             view_detail()

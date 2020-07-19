@@ -66,4 +66,19 @@
         Me.Close()
         Kategori.Show()
     End Sub
+
+    Private Sub Panel7_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Panel7.Click
+        Me.Close()
+        Rating_pencocokan.Show()
+    End Sub
+
+    Private Sub Label12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label12.Click
+        Me.Close()
+        Rating_pencocokan.Show()
+    End Sub
+
+    Private Sub PictureBox6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox6.Click
+        Me.Close()
+        Rating_pencocokan.Show()
+    End Sub
 End Class

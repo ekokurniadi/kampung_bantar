@@ -79,7 +79,7 @@ Partial Class Alternatif
         '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.Color.DarkOrchid
+        Me.Panel3.BackColor = System.Drawing.Color.DarkBlue
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel3.Location = New System.Drawing.Point(0, 703)
@@ -142,11 +142,11 @@ Partial Class Alternatif
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
         Me.Label6.Location = New System.Drawing.Point(26, 99)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(98, 15)
+        Me.Label6.Size = New System.Drawing.Size(110, 15)
         Me.Label6.TabIndex = 34
         Me.Label6.Text = "Nama Kampung"
         '
@@ -254,28 +254,28 @@ Partial Class Alternatif
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
         Me.Label4.Location = New System.Drawing.Point(26, 71)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(81, 15)
+        Me.Label4.Size = New System.Drawing.Size(93, 15)
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Kode Peserta"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
         Me.Label2.Location = New System.Drawing.Point(26, 48)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(86, 15)
+        Me.Label2.Size = New System.Drawing.Size(101, 15)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Kode Alternatif"
         '
         'Panel4
         '
-        Me.Panel4.BackColor = System.Drawing.Color.DarkOrchid
+        Me.Panel4.BackColor = System.Drawing.Color.DarkBlue
         Me.Panel4.Controls.Add(Me.PictureBox1)
         Me.Panel4.Controls.Add(Me.Label1)
         Me.Panel4.Location = New System.Drawing.Point(1, 1)
@@ -327,7 +327,7 @@ Partial Class Alternatif
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.DarkOrchid
+        Me.Panel2.BackColor = System.Drawing.Color.DarkBlue
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Label17)
         Me.Panel2.Controls.Add(Me.PictureBox3)

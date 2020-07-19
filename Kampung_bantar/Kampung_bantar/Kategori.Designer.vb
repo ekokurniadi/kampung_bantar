@@ -99,7 +99,7 @@ Partial Class Kategori
         '
         'Panel4
         '
-        Me.Panel4.BackColor = System.Drawing.Color.DarkOrchid
+        Me.Panel4.BackColor = System.Drawing.Color.DarkBlue
         Me.Panel4.Controls.Add(Me.PictureBox12)
         Me.Panel4.Controls.Add(Me.Label1)
         Me.Panel4.Location = New System.Drawing.Point(1, 1)
@@ -285,7 +285,7 @@ Partial Class Kategori
         '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.Color.DarkOrchid
+        Me.Panel3.BackColor = System.Drawing.Color.DarkBlue
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel3.Location = New System.Drawing.Point(0, 703)
@@ -316,7 +316,7 @@ Partial Class Kategori
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.DarkOrchid
+        Me.Panel2.BackColor = System.Drawing.Color.DarkBlue
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Label17)
         Me.Panel2.Controls.Add(Me.PictureBox3)

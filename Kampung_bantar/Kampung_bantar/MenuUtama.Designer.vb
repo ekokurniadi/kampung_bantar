@@ -124,9 +124,9 @@ Partial Class MenuUtama
         Me.Label12.ForeColor = System.Drawing.Color.Black
         Me.Label12.Location = New System.Drawing.Point(82, 41)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(89, 19)
+        Me.Label12.Size = New System.Drawing.Size(94, 38)
         Me.Label12.TabIndex = 12
-        Me.Label12.Text = "Perhitungan"
+        Me.Label12.Text = "Perhitungan " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Nilai"
         '
         'Panel7
         '

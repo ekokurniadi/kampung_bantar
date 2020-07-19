@@ -505,6 +505,7 @@ Partial Class Variabel_penilaian
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(125, 22)
         Me.TextBox1.TabIndex = 50
+        Me.TextBox1.Visible = False
         '
         'Timer1
         '

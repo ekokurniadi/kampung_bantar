@@ -27,7 +27,7 @@ Public Class Normalisasi
     End Sub
     Sub tinggi()
         Dim tinggi, rendah, ratarata, total, banyak As Double
-
+        On Error Resume Next
         Dim a, b As String
         tinggi = (From row As DataGridViewRow In DataGridView2.Rows Where row.Cells(3).FormattedValue.ToString() <> String.Empty Select Convert.ToDecimal(row.Cells(3).FormattedValue)).Max().ToString()
         rendah = (From row As DataGridViewRow In DataGridView2.Rows Where row.Cells(3).FormattedValue.ToString() <> String.Empty Select Convert.ToDecimal(row.Cells(3).FormattedValue)).Min().ToString()
@@ -42,8 +42,7 @@ Public Class Normalisasi
             MsgBox("Data belum lengkap")
             Exit Sub
         End If
-      
-        cmd = New MySqlCommand("select * from normalisasi where kode_rating_kecocokan='" & txt_kode.Text & "'", conn)
+        cmd = New MySqlCommand("select * from normalisasi where kode_normalisasi='" & txt_kode.Text & "'", conn)
         rd = cmd.ExecuteReader
         rd.Read()
         If Not rd.HasRows Then
@@ -51,23 +50,47 @@ Public Class Normalisasi
             Dim sqledit As String = "update rating_kecocokan set status = 'selesai' where kode_rating_kecocokan='" & txt_kode.Text & "'"
             cmd = New MySqlCommand(sqledit, conn)
             cmd.ExecuteNonQuery()
-            Dim simpannormalisasi As String = "insert into normalisasi values('""','" & txt_kode.Text & "','" & Format(DateTimePicker1.Value, "yyyy-MM-dd") & "')"
+            Dim simpannormalisasi As String = "insert into normalisasi values('" & txt_kode.Text & "','" & Format(DateTimePicker1.Value, "yyyy-MM-dd") & "')"
             cmd2 = New MySqlCommand(simpannormalisasi, conn)
             cmd2.ExecuteNonQuery()
-            Dim simpanrangking As String = "insert into perangkingan values('""','" & txt_kode.Text & "','" & Format(DateTimePicker1.Value, "yyyy-MM-dd") & "')"
-            cmd3 = New MySqlCommand(simpannormalisasi, conn)
+            rd.Close()
+            Dim simpanrangking As String = "insert into perangkingan values('" & txt_kode.Text & "','" & Format(DateTimePicker1.Value, "yyyy-MM-dd") & "')"
+            cmd3 = New MySqlCommand(simpanrangking, conn)
             cmd3.ExecuteNonQuery()
+            rd.Close()
         End If
         For baris As Integer = 0 To DataGridView1.Rows.Count - 2
+            Dim nilai_normal As String = DataGridView1.Rows(baris).Cells(5).Value
+            Dim n As String = nilai_normal.Replace(",", ".")
             'simpan ke tabel detail
-            Dim simpanmaster As String = "insert into normalisasi_detail values('""','" & txt_kode.Text & "','" & DataGridView1.Rows(baris).Cells(0).Value.Substring(0, 6) & "','" & DataGridView1.Rows(baris).Cells(3).Value.Substring(0, 6) & "','" & DataGridView1.Rows(baris).Cells(4).Value & "','" & DataGridView1.Rows(baris).Cells(5).Value & "','" & DataGridView1.Rows(baris).Cells(6).Value & "')"
-            cmd = New MySqlCommand(simpanmaster, conn)
-            cmd.ExecuteNonQuery()
+            Dim simpan_detail_normalisasi As String = "insert into normalisasi_detail values('""','" & txt_kode.Text & "','" & DataGridView1.Rows(baris).Cells(1).Value & "','" & DataGridView1.Rows(baris).Cells(2).Value & "','" & DataGridView1.Rows(baris).Cells(3).Value & "','" & n & "')"
+            cmd4 = New MySqlCommand(simpan_detail_normalisasi, conn)
+            rd.Close()
+            cmd4.ExecuteNonQuery()
+        Next baris
+        For baris As Integer = 0 To DataGridView2.Rows.Count - 2
+            Dim nilai As String = DataGridView2.Rows(baris).Cells(3).Value
+            Dim nn As String = nilai.Replace(",", ".")
+            'simpan ke tabel detail
+            Dim simpan_detail_rangking As String = "insert into perangkingan_detail values('""','" & txt_kode.Text & "','" & DataGridView2.Rows(baris).Cells(1).Value & "','" & nn & "','" & DataGridView2.Rows(baris).Cells(4).Value & "')"
+            cmd5 = New MySqlCommand(simpan_detail_rangking, conn)
+            cmd5.ExecuteNonQuery()
             rd.Close()
         Next baris
         MsgBox("Data Berhasil disimpan")
         rd.Close()
         DataGridView1.Columns.Clear()
-        ''Call bersih()
+        DataGridView2.Columns.Clear()
+        txt_kode.Clear()
+
+    End Sub
+
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
+        Me.Close()
+        MenuUtama.Show()
     End Sub
 End Class

@@ -36,7 +36,7 @@ Partial Class Rating_pencocokan
         Me.txt_kode = New System.Windows.Forms.TextBox
         Me.Label1 = New System.Windows.Forms.Label
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox
+        Me.GR = New System.Windows.Forms.GroupBox
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label4 = New System.Windows.Forms.Label
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker
@@ -50,7 +50,7 @@ Partial Class Rating_pencocokan
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
+        Me.GR.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
@@ -137,7 +137,7 @@ Partial Class Rating_pencocokan
         Me.Button7.BackgroundImage = CType(resources.GetObject("Button7.BackgroundImage"), System.Drawing.Image)
         Me.Button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button7.Location = New System.Drawing.Point(220, 424)
+        Me.Button7.Location = New System.Drawing.Point(434, 424)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(100, 56)
         Me.Button7.TabIndex = 31
@@ -169,7 +169,7 @@ Partial Class Rating_pencocokan
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox1.BackgroundImage = CType(resources.GetObject("GroupBox1.BackgroundImage"), System.Drawing.Image)
-        Me.GroupBox1.Controls.Add(Me.GroupBox2)
+        Me.GroupBox1.Controls.Add(Me.GR)
         Me.GroupBox1.Controls.Add(Me.DataGridView1)
         Me.GroupBox1.Controls.Add(Me.Button7)
         Me.GroupBox1.Controls.Add(Me.Button4)
@@ -180,18 +180,17 @@ Partial Class Rating_pencocokan
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         '
-        'GroupBox2
+        'GR
         '
-        Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Controls.Add(Me.txt_kode)
-        Me.GroupBox2.Controls.Add(Me.DateTimePicker1)
-        Me.GroupBox2.Location = New System.Drawing.Point(-201, 45)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(664, 61)
-        Me.GroupBox2.TabIndex = 54
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "GroupBox2"
+        Me.GR.Controls.Add(Me.Label2)
+        Me.GR.Controls.Add(Me.Label4)
+        Me.GR.Controls.Add(Me.txt_kode)
+        Me.GR.Controls.Add(Me.DateTimePicker1)
+        Me.GR.Location = New System.Drawing.Point(13, 45)
+        Me.GR.Name = "GR"
+        Me.GR.Size = New System.Drawing.Size(664, 61)
+        Me.GR.TabIndex = 54
+        Me.GR.TabStop = False
         '
         'Label2
         '
@@ -236,7 +235,7 @@ Partial Class Rating_pencocokan
         Me.Button4.BackgroundImage = CType(resources.GetObject("Button4.BackgroundImage"), System.Drawing.Image)
         Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button4.Location = New System.Drawing.Point(117, 424)
+        Me.Button4.Location = New System.Drawing.Point(331, 424)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(100, 56)
         Me.Button4.TabIndex = 30
@@ -251,7 +250,7 @@ Partial Class Rating_pencocokan
         Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), System.Drawing.Image)
         Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Location = New System.Drawing.Point(15, 424)
+        Me.Button2.Location = New System.Drawing.Point(229, 424)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(97, 56)
         Me.Button2.TabIndex = 28
@@ -285,7 +284,7 @@ Partial Class Rating_pencocokan
         Me.Panel1.BackColor = System.Drawing.Color.Gray
         Me.Panel1.Controls.Add(Me.GroupBox1)
         Me.Panel1.Controls.Add(Me.Panel4)
-        Me.Panel1.Location = New System.Drawing.Point(0, 82)
+        Me.Panel1.Location = New System.Drawing.Point(7, 83)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1354, 558)
         Me.Panel1.TabIndex = 31
@@ -294,6 +293,7 @@ Partial Class Rating_pencocokan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1366, 745)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel3)
@@ -306,8 +306,8 @@ Partial Class Rating_pencocokan
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
+        Me.GR.ResumeLayout(False)
+        Me.GR.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
@@ -337,5 +337,5 @@ Partial Class Rating_pencocokan
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents GR As System.Windows.Forms.GroupBox
 End Class
