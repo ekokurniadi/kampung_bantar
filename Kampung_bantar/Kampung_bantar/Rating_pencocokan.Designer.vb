@@ -59,7 +59,7 @@ Partial Class Rating_pencocokan
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.DarkOrchid
+        Me.Panel2.BackColor = System.Drawing.Color.DarkBlue
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Label17)
         Me.Panel2.Controls.Add(Me.PictureBox3)
@@ -76,7 +76,7 @@ Partial Class Rating_pencocokan
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(85, 27)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(779, 29)
+        Me.Label3.Size = New System.Drawing.Size(968, 35)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Sistem Pendukung Keputusan Pemenang Lomba Kampung Bantar Kota Jambi"
         '
@@ -87,7 +87,7 @@ Partial Class Rating_pencocokan
         Me.Label17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Label17.Location = New System.Drawing.Point(1148, 27)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(117, 31)
+        Me.Label17.Size = New System.Drawing.Size(146, 39)
         Me.Label17.TabIndex = 7
         Me.Label17.Text = "Label17"
         '
@@ -107,7 +107,7 @@ Partial Class Rating_pencocokan
         '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.Color.DarkOrchid
+        Me.Panel3.BackColor = System.Drawing.Color.DarkBlue
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel3.Location = New System.Drawing.Point(0, 703)
@@ -122,7 +122,7 @@ Partial Class Rating_pencocokan
         Me.Label5.ForeColor = System.Drawing.SystemColors.InactiveBorder
         Me.Label5.Location = New System.Drawing.Point(489, 12)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(388, 19)
+        Me.Label5.Size = New System.Drawing.Size(488, 24)
         Me.Label5.TabIndex = 1
         Me.Label5.Text = "APLIKASI PENILAIAN KAMPUNG BANTAR KOTA JAMBI     "
         '
@@ -161,7 +161,7 @@ Partial Class Rating_pencocokan
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(63, 15)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(184, 16)
+        Me.Label1.Size = New System.Drawing.Size(229, 20)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Form Data Rating Kecocokan"
         '
@@ -199,7 +199,7 @@ Partial Class Rating_pencocokan
         Me.Label2.ForeColor = System.Drawing.Color.Black
         Me.Label2.Location = New System.Drawing.Point(11, 17)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(139, 15)
+        Me.Label2.Size = New System.Drawing.Size(169, 18)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Kode Rating Kecocokan"
         '
@@ -210,7 +210,7 @@ Partial Class Rating_pencocokan
         Me.Label4.ForeColor = System.Drawing.Color.Black
         Me.Label4.Location = New System.Drawing.Point(333, 17)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(52, 15)
+        Me.Label4.Size = New System.Drawing.Size(60, 18)
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Tanggal"
         '
@@ -271,7 +271,7 @@ Partial Class Rating_pencocokan
         '
         'Panel4
         '
-        Me.Panel4.BackColor = System.Drawing.Color.DarkOrchid
+        Me.Panel4.BackColor = System.Drawing.Color.DarkBlue
         Me.Panel4.Controls.Add(Me.PictureBox1)
         Me.Panel4.Controls.Add(Me.Label1)
         Me.Panel4.Location = New System.Drawing.Point(1, 1)

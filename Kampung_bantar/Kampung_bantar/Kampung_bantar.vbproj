@@ -88,17 +88,22 @@
     <Compile Include="Alternatif.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Kategori.Designer.vb">
-      <DependentUpon>Kategori.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Kategori.vb">
-      <SubType>Form</SubType>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kategori.Designer.vb">
+      <DependentUpon>Kategori.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Kategori.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Kampung.Designer.vb">
@@ -152,11 +157,14 @@
     <EmbeddedResource Include="Alternatif.resx">
       <DependentUpon>Alternatif.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Kategori.resx">
-      <DependentUpon>Kategori.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kategori.resx">
+      <DependentUpon>Kategori.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kampung.resx">
       <DependentUpon>Kampung.vb</DependentUpon>

@@ -81,4 +81,24 @@
         Me.Close()
         Rating_pencocokan.Show()
     End Sub
+
+    Private Sub Panel5_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Panel5.Click
+        Form2.Show()
+    End Sub
+
+    Private Sub Panel5_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel5.Paint
+
+    End Sub
+
+    Private Sub Label15_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label15.Click
+        Form2.Show()
+    End Sub
+
+    Private Sub Label16_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label16.Click
+        Form2.Show()
+    End Sub
+
+    Private Sub PictureBox8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox8.Click
+        Form2.Show()
+    End Sub
 End Class

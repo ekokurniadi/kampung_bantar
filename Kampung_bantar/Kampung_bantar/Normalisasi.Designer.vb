@@ -27,6 +27,7 @@ Partial Class Normalisasi
         Me.Button7 = New System.Windows.Forms.Button
         Me.Panel1 = New System.Windows.Forms.Panel
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.Label9 = New System.Windows.Forms.Label
         Me.Label8 = New System.Windows.Forms.Label
         Me.DataGridView2 = New System.Windows.Forms.DataGridView
         Me.Label7 = New System.Windows.Forms.Label
@@ -49,7 +50,6 @@ Partial Class Normalisasi
         Me.Label3 = New System.Windows.Forms.Label
         Me.Panel2 = New System.Windows.Forms.Panel
         Me.Label17 = New System.Windows.Forms.Label
-        Me.Label9 = New System.Windows.Forms.Label
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -106,6 +106,17 @@ Partial Class Normalisasi
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.Black
+        Me.Label9.Location = New System.Drawing.Point(30, 88)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(87, 18)
+        Me.Label9.TabIndex = 59
+        Me.Label9.Text = "Normalisasi"
+        '
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -113,7 +124,7 @@ Partial Class Normalisasi
         Me.Label8.ForeColor = System.Drawing.Color.Black
         Me.Label8.Location = New System.Drawing.Point(-177, 99)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(73, 15)
+        Me.Label8.Size = New System.Drawing.Size(87, 18)
         Me.Label8.TabIndex = 58
         Me.Label8.Text = "Normalisasi"
         '
@@ -134,7 +145,7 @@ Partial Class Normalisasi
         Me.Label7.ForeColor = System.Drawing.Color.Black
         Me.Label7.Location = New System.Drawing.Point(30, 252)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(84, 15)
+        Me.Label7.Size = New System.Drawing.Size(98, 18)
         Me.Label7.TabIndex = 51
         Me.Label7.Text = "Perangkingan"
         '
@@ -167,7 +178,7 @@ Partial Class Normalisasi
         Me.Label4.ForeColor = System.Drawing.Color.Black
         Me.Label4.Location = New System.Drawing.Point(11, 17)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(105, 15)
+        Me.Label4.Size = New System.Drawing.Size(126, 18)
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Kode Normalisasi"
         '
@@ -178,7 +189,7 @@ Partial Class Normalisasi
         Me.Label6.ForeColor = System.Drawing.Color.Black
         Me.Label6.Location = New System.Drawing.Point(333, 17)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(52, 15)
+        Me.Label6.Size = New System.Drawing.Size(60, 18)
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "Tanggal"
         '
@@ -219,12 +230,12 @@ Partial Class Normalisasi
         Me.Label2.ForeColor = System.Drawing.Color.Black
         Me.Label2.Location = New System.Drawing.Point(26, 48)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(0, 15)
+        Me.Label2.Size = New System.Drawing.Size(0, 18)
         Me.Label2.TabIndex = 0
         '
         'Panel4
         '
-        Me.Panel4.BackColor = System.Drawing.Color.DarkOrchid
+        Me.Panel4.BackColor = System.Drawing.Color.DarkBlue
         Me.Panel4.Controls.Add(Me.PictureBox12)
         Me.Panel4.Controls.Add(Me.Label1)
         Me.Panel4.Location = New System.Drawing.Point(1, 1)
@@ -249,7 +260,7 @@ Partial Class Normalisasi
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(63, 15)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(183, 16)
+        Me.Label1.Size = New System.Drawing.Size(229, 20)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Form Data Kategori Penilaian"
         '
@@ -265,7 +276,7 @@ Partial Class Normalisasi
         Me.Label5.ForeColor = System.Drawing.SystemColors.InactiveBorder
         Me.Label5.Location = New System.Drawing.Point(489, 12)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(388, 19)
+        Me.Label5.Size = New System.Drawing.Size(488, 24)
         Me.Label5.TabIndex = 1
         Me.Label5.Text = "APLIKASI PENILAIAN KAMPUNG BANTAR KOTA JAMBI     "
         '
@@ -285,7 +296,7 @@ Partial Class Normalisasi
         '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.Color.DarkOrchid
+        Me.Panel3.BackColor = System.Drawing.Color.DarkBlue
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel3.Location = New System.Drawing.Point(0, 703)
@@ -300,13 +311,13 @@ Partial Class Normalisasi
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(85, 27)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(779, 29)
+        Me.Label3.Size = New System.Drawing.Size(968, 35)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Sistem Pendukung Keputusan Pemenang Lomba Kampung Bantar Kota Jambi"
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.DarkOrchid
+        Me.Panel2.BackColor = System.Drawing.Color.DarkBlue
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Label17)
         Me.Panel2.Controls.Add(Me.PictureBox3)
@@ -323,20 +334,9 @@ Partial Class Normalisasi
         Me.Label17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Label17.Location = New System.Drawing.Point(1148, 27)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(117, 31)
+        Me.Label17.Size = New System.Drawing.Size(146, 39)
         Me.Label17.TabIndex = 7
         Me.Label17.Text = "Label17"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(30, 88)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(73, 15)
-        Me.Label9.TabIndex = 59
-        Me.Label9.Text = "Normalisasi"
         '
         'Normalisasi
         '

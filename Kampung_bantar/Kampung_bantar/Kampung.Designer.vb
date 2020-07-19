@@ -73,7 +73,7 @@ Partial Class Kampung
         Me.Label9.ForeColor = System.Drawing.Color.Black
         Me.Label9.Location = New System.Drawing.Point(460, 105)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(25, 15)
+        Me.Label9.Size = New System.Drawing.Size(30, 18)
         Me.Label9.TabIndex = 40
         Me.Label9.Text = "RT"
         '
@@ -92,7 +92,7 @@ Partial Class Kampung
         Me.Label8.ForeColor = System.Drawing.Color.Black
         Me.Label8.Location = New System.Drawing.Point(459, 45)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(79, 15)
+        Me.Label8.Size = New System.Drawing.Size(92, 18)
         Me.Label8.TabIndex = 38
         Me.Label8.Text = "Kecamatan"
         '
@@ -107,7 +107,7 @@ Partial Class Kampung
         '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.Color.DarkOrchid
+        Me.Panel3.BackColor = System.Drawing.Color.DarkBlue
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel3.Location = New System.Drawing.Point(0, 703)
@@ -122,7 +122,7 @@ Partial Class Kampung
         Me.Label5.ForeColor = System.Drawing.SystemColors.InactiveBorder
         Me.Label5.Location = New System.Drawing.Point(489, 12)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(388, 19)
+        Me.Label5.Size = New System.Drawing.Size(488, 24)
         Me.Label5.TabIndex = 1
         Me.Label5.Text = "APLIKASI PENILAIAN KAMPUNG BANTAR KOTA JAMBI     "
         '
@@ -188,7 +188,7 @@ Partial Class Kampung
         Me.Label7.ForeColor = System.Drawing.Color.Black
         Me.Label7.Location = New System.Drawing.Point(458, 71)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(73, 15)
+        Me.Label7.Size = New System.Drawing.Size(83, 18)
         Me.Label7.TabIndex = 36
         Me.Label7.Text = "Kelurahan"
         '
@@ -207,7 +207,7 @@ Partial Class Kampung
         Me.Label6.ForeColor = System.Drawing.Color.Black
         Me.Label6.Location = New System.Drawing.Point(26, 99)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(51, 15)
+        Me.Label6.Size = New System.Drawing.Size(59, 18)
         Me.Label6.TabIndex = 34
         Me.Label6.Text = "Alamat"
         '
@@ -327,7 +327,7 @@ Partial Class Kampung
         Me.Label4.ForeColor = System.Drawing.Color.Black
         Me.Label4.Location = New System.Drawing.Point(26, 71)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(110, 15)
+        Me.Label4.Size = New System.Drawing.Size(127, 18)
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Nama Kampung"
         '
@@ -338,13 +338,13 @@ Partial Class Kampung
         Me.Label2.ForeColor = System.Drawing.Color.Black
         Me.Label2.Location = New System.Drawing.Point(26, 48)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(93, 15)
+        Me.Label2.Size = New System.Drawing.Size(110, 18)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Kode Peserta"
         '
         'Panel4
         '
-        Me.Panel4.BackColor = System.Drawing.Color.DarkOrchid
+        Me.Panel4.BackColor = System.Drawing.Color.DarkBlue
         Me.Panel4.Controls.Add(Me.PictureBox1)
         Me.Panel4.Controls.Add(Me.Label1)
         Me.Panel4.Location = New System.Drawing.Point(1, 1)
@@ -369,7 +369,7 @@ Partial Class Kampung
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(63, 15)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(121, 16)
+        Me.Label1.Size = New System.Drawing.Size(152, 20)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Form Data Peserta"
         '
@@ -380,7 +380,7 @@ Partial Class Kampung
         Me.Label17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Label17.Location = New System.Drawing.Point(1148, 27)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(117, 31)
+        Me.Label17.Size = New System.Drawing.Size(146, 39)
         Me.Label17.TabIndex = 7
         Me.Label17.Text = "Label17"
         '
@@ -396,7 +396,7 @@ Partial Class Kampung
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.DarkOrchid
+        Me.Panel2.BackColor = System.Drawing.Color.DarkBlue
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Label17)
         Me.Panel2.Controls.Add(Me.PictureBox3)
@@ -413,7 +413,7 @@ Partial Class Kampung
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(85, 27)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(779, 29)
+        Me.Label3.Size = New System.Drawing.Size(968, 35)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Sistem Pendukung Keputusan Pemenang Lomba Kampung Bantar Kota Jambi"
         '
@@ -427,6 +427,7 @@ Partial Class Kampung
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
         Me.Name = "Kampung"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Kampung"
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()

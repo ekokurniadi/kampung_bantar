@@ -15,3 +15,4 @@ D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Debug\
 D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Debug\Kampung_bantar.Variabel_penilaian.resources
 D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Debug\Kampung_bantar.Rating_pencocokan.resources
 D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Debug\Kampung_bantar.Normalisasi.resources
+D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Debug\Kampung_bantar.Form2.resources
