@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 19, 2020 at 02:53 PM
+-- Generation Time: Jul 19, 2020 at 05:44 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 5.6.32
 
@@ -62,8 +62,7 @@ CREATE TABLE `kampung` (
 --
 
 INSERT INTO `kampung` (`kode`, `nama`, `alamat`, `kecamatan`, `kelurahan`, `rt`) VALUES
-('KP0001', 'Eka Jaya', 'Eka jaya ', 'Paal Merah', 'Eka Jaya', '11'),
-('KP0002', 'Marene', 'Marene', 'Marene', 'Marene', '12');
+('KP0001', 'Eka Jaya', 'Eka jaya ', 'KC0001', 'KL0001', '11');
 
 -- --------------------------------------------------------
 
@@ -84,6 +83,44 @@ INSERT INTO `kategori_penilaian` (`id`, `kategori_penilaian`) VALUES
 (1, 'Kampung Bersih'),
 (2, 'Kampung Aman'),
 (3, 'Kampung Pintar');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kecamatan`
+--
+
+CREATE TABLE `kecamatan` (
+  `kode_kecamatan` varchar(11) NOT NULL,
+  `kecamatan` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `kecamatan`
+--
+
+INSERT INTO `kecamatan` (`kode_kecamatan`, `kecamatan`) VALUES
+('KC0001', 'Jambi Selatan');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kelurahan`
+--
+
+CREATE TABLE `kelurahan` (
+  `kode_kelurahan` varchar(11) NOT NULL,
+  `kode_kecamatan` varchar(11) NOT NULL,
+  `kecamatan` varchar(50) NOT NULL,
+  `kelurahan` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `kelurahan`
+--
+
+INSERT INTO `kelurahan` (`kode_kelurahan`, `kode_kecamatan`, `kecamatan`, `kelurahan`) VALUES
+('KL0001', 'KC0001', 'Jambi Selatan', 'Pasir Putih');
 
 -- --------------------------------------------------------
 
@@ -311,6 +348,18 @@ ALTER TABLE `kampung`
 --
 ALTER TABLE `kategori_penilaian`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `kecamatan`
+--
+ALTER TABLE `kecamatan`
+  ADD PRIMARY KEY (`kode_kecamatan`);
+
+--
+-- Indexes for table `kelurahan`
+--
+ALTER TABLE `kelurahan`
+  ADD PRIMARY KEY (`kode_kelurahan`);
 
 --
 -- Indexes for table `kriteria`
