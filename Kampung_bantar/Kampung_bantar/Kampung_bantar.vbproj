@@ -88,6 +88,18 @@
     <Compile Include="Alternatif.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Kelurahan.Designer.vb">
+      <DependentUpon>Kelurahan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Kelurahan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kecamatan.Designer.vb">
+      <DependentUpon>Kecamatan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Kecamatan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
@@ -156,6 +168,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Alternatif.resx">
       <DependentUpon>Alternatif.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kelurahan.resx">
+      <DependentUpon>Kelurahan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kecamatan.resx">
+      <DependentUpon>Kecamatan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>

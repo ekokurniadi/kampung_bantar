@@ -25,7 +25,6 @@ Partial Class Kampung
         Me.components = New System.ComponentModel.Container
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Kampung))
         Me.Label9 = New System.Windows.Forms.Label
-        Me.txt_kecamatan = New System.Windows.Forms.TextBox
         Me.Label8 = New System.Windows.Forms.Label
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
@@ -34,7 +33,6 @@ Partial Class Kampung
         Me.Panel1 = New System.Windows.Forms.Panel
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
         Me.TextBox1 = New System.Windows.Forms.TextBox
-        Me.txt_kelurahan = New System.Windows.Forms.TextBox
         Me.Label7 = New System.Windows.Forms.Label
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox
         Me.Label6 = New System.Windows.Forms.Label
@@ -56,6 +54,8 @@ Partial Class Kampung
         Me.PictureBox3 = New System.Windows.Forms.PictureBox
         Me.Panel2 = New System.Windows.Forms.Panel
         Me.Label3 = New System.Windows.Forms.Label
+        Me.txt_kecamatan = New System.Windows.Forms.ComboBox
+        Me.txt_kelurahan = New System.Windows.Forms.ComboBox
         Me.Panel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -76,14 +76,6 @@ Partial Class Kampung
         Me.Label9.Size = New System.Drawing.Size(30, 18)
         Me.Label9.TabIndex = 40
         Me.Label9.Text = "RT"
-        '
-        'txt_kecamatan
-        '
-        Me.txt_kecamatan.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_kecamatan.Location = New System.Drawing.Point(581, 44)
-        Me.txt_kecamatan.Name = "txt_kecamatan"
-        Me.txt_kecamatan.Size = New System.Drawing.Size(190, 22)
-        Me.txt_kecamatan.TabIndex = 39
         '
         'Label8
         '
@@ -140,11 +132,11 @@ Partial Class Kampung
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox1.BackgroundImage = CType(resources.GetObject("GroupBox1.BackgroundImage"), System.Drawing.Image)
+        Me.GroupBox1.Controls.Add(Me.txt_kelurahan)
+        Me.GroupBox1.Controls.Add(Me.txt_kecamatan)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
         Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Controls.Add(Me.txt_kecamatan)
         Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.txt_kelurahan)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.RichTextBox1)
         Me.GroupBox1.Controls.Add(Me.Label6)
@@ -172,14 +164,6 @@ Partial Class Kampung
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(247, 22)
         Me.TextBox1.TabIndex = 41
-        '
-        'txt_kelurahan
-        '
-        Me.txt_kelurahan.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_kelurahan.Location = New System.Drawing.Point(581, 72)
-        Me.txt_kelurahan.Name = "txt_kelurahan"
-        Me.txt_kelurahan.Size = New System.Drawing.Size(247, 22)
-        Me.txt_kelurahan.TabIndex = 37
         '
         'Label7
         '
@@ -417,6 +401,22 @@ Partial Class Kampung
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Sistem Pendukung Keputusan Pemenang Lomba Kampung Bantar Kota Jambi"
         '
+        'txt_kecamatan
+        '
+        Me.txt_kecamatan.FormattingEnabled = True
+        Me.txt_kecamatan.Location = New System.Drawing.Point(580, 43)
+        Me.txt_kecamatan.Name = "txt_kecamatan"
+        Me.txt_kecamatan.Size = New System.Drawing.Size(248, 21)
+        Me.txt_kecamatan.TabIndex = 42
+        '
+        'txt_kelurahan
+        '
+        Me.txt_kelurahan.FormattingEnabled = True
+        Me.txt_kelurahan.Location = New System.Drawing.Point(581, 71)
+        Me.txt_kelurahan.Name = "txt_kelurahan"
+        Me.txt_kelurahan.Size = New System.Drawing.Size(247, 21)
+        Me.txt_kelurahan.TabIndex = 43
+        '
         'Kampung
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -445,14 +445,12 @@ Partial Class Kampung
 
     End Sub
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents txt_kecamatan As System.Windows.Forms.TextBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Timer2 As System.Windows.Forms.Timer
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents txt_kelurahan As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
@@ -476,4 +474,6 @@ Partial Class Kampung
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txt_kelurahan As System.Windows.Forms.ComboBox
+    Friend WithEvents txt_kecamatan As System.Windows.Forms.ComboBox
 End Class

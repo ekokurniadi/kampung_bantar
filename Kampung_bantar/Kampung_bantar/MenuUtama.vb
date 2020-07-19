@@ -102,7 +102,34 @@
         Form2.ShowDialog()
     End Sub
 
-    Private Sub MenuUtama_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+   
 
+    Private Sub Panel11_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Panel11.Click
+        Kecamatan.Show()
+    End Sub
+
+   
+    Private Sub Label4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label4.Click
+        Kecamatan.Show()
+    End Sub
+
+    Private Sub PictureBox5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox5.Click
+        Kecamatan.Show()
+    End Sub
+
+    Private Sub Panel12_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Panel12.Click
+        Kelurahan.Show()
+    End Sub
+
+    Private Sub Panel12_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel12.Paint
+
+    End Sub
+
+    Private Sub Label7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label7.Click
+        Kelurahan.Show()
+    End Sub
+
+    Private Sub PictureBox10_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox10.Click
+        Kelurahan.Show()
     End Sub
 End Class

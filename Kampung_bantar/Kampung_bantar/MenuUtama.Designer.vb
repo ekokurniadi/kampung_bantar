@@ -60,6 +60,12 @@ Partial Class MenuUtama
         Me.Panel3 = New System.Windows.Forms.Panel
         Me.Panel1 = New System.Windows.Forms.Panel
         Me.Panel2 = New System.Windows.Forms.Panel
+        Me.Panel11 = New System.Windows.Forms.Panel
+        Me.Label4 = New System.Windows.Forms.Label
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox
+        Me.Panel12 = New System.Windows.Forms.Panel
+        Me.Label7 = New System.Windows.Forms.Label
+        Me.PictureBox10 = New System.Windows.Forms.PictureBox
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel7.SuspendLayout()
@@ -79,6 +85,10 @@ Partial Class MenuUtama
         Me.Panel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        Me.Panel11.SuspendLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel12.SuspendLayout()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Timer1
@@ -120,11 +130,11 @@ Partial Class MenuUtama
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Rockwell Condensed", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Font = New System.Drawing.Font("Rockwell Condensed", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.Black
         Me.Label12.Location = New System.Drawing.Point(82, 41)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(118, 48)
+        Me.Label12.Size = New System.Drawing.Size(111, 44)
         Me.Label12.TabIndex = 12
         Me.Label12.Text = "Perhitungan " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Nilai"
         '
@@ -135,7 +145,7 @@ Partial Class MenuUtama
         Me.Panel7.Controls.Add(Me.Label12)
         Me.Panel7.Controls.Add(Me.PictureBox6)
         Me.Panel7.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel7.Location = New System.Drawing.Point(296, 381)
+        Me.Panel7.Location = New System.Drawing.Point(388, 404)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(186, 119)
         Me.Panel7.TabIndex = 27
@@ -236,7 +246,7 @@ Partial Class MenuUtama
         Me.Panel5.Controls.Add(Me.PictureBox8)
         Me.Panel5.Controls.Add(Me.Label16)
         Me.Panel5.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel5.Location = New System.Drawing.Point(681, 381)
+        Me.Panel5.Location = New System.Drawing.Point(773, 401)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(186, 119)
         Me.Panel5.TabIndex = 22
@@ -291,9 +301,9 @@ Partial Class MenuUtama
         Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.Location = New System.Drawing.Point(91, 41)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(108, 24)
+        Me.Label1.Size = New System.Drawing.Size(64, 24)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Master Data"
+        Me.Label1.Text = "Master"
         '
         'Panel8
         '
@@ -303,7 +313,7 @@ Partial Class MenuUtama
         Me.Panel8.Controls.Add(Me.Label8)
         Me.Panel8.Controls.Add(Me.Label9)
         Me.Panel8.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel8.Location = New System.Drawing.Point(681, 256)
+        Me.Panel8.Location = New System.Drawing.Point(965, 278)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(186, 119)
         Me.Panel8.TabIndex = 24
@@ -325,7 +335,7 @@ Partial Class MenuUtama
         Me.Panel4.Controls.Add(Me.Label6)
         Me.Panel4.Controls.Add(Me.PictureBox2)
         Me.Panel4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel4.Location = New System.Drawing.Point(489, 256)
+        Me.Panel4.Location = New System.Drawing.Point(773, 278)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(186, 119)
         Me.Panel4.TabIndex = 20
@@ -358,7 +368,7 @@ Partial Class MenuUtama
         Me.Panel9.Controls.Add(Me.PictureBox9)
         Me.Panel9.Controls.Add(Me.Label18)
         Me.Panel9.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel9.Location = New System.Drawing.Point(873, 381)
+        Me.Panel9.Location = New System.Drawing.Point(965, 401)
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(186, 119)
         Me.Panel9.TabIndex = 25
@@ -385,7 +395,7 @@ Partial Class MenuUtama
         Me.Panel6.Controls.Add(Me.Label11)
         Me.Panel6.Controls.Add(Me.PictureBox4)
         Me.Panel6.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel6.Location = New System.Drawing.Point(873, 256)
+        Me.Panel6.Location = New System.Drawing.Point(197, 403)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(186, 119)
         Me.Panel6.TabIndex = 21
@@ -428,7 +438,7 @@ Partial Class MenuUtama
         Me.Panel10.Controls.Add(Me.PictureBox7)
         Me.Panel10.Controls.Add(Me.Label14)
         Me.Panel10.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel10.Location = New System.Drawing.Point(489, 381)
+        Me.Panel10.Location = New System.Drawing.Point(581, 402)
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(186, 119)
         Me.Panel10.TabIndex = 23
@@ -451,7 +461,7 @@ Partial Class MenuUtama
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Panel1.Location = New System.Drawing.Point(297, 256)
+        Me.Panel1.Location = New System.Drawing.Point(581, 280)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(186, 119)
         Me.Panel1.TabIndex = 19
@@ -468,12 +478,80 @@ Partial Class MenuUtama
         Me.Panel2.Size = New System.Drawing.Size(1366, 112)
         Me.Panel2.TabIndex = 17
         '
+        'Panel11
+        '
+        Me.Panel11.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.Panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel11.Controls.Add(Me.Label4)
+        Me.Panel11.Controls.Add(Me.PictureBox5)
+        Me.Panel11.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Panel11.Location = New System.Drawing.Point(200, 280)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(186, 119)
+        Me.Panel11.TabIndex = 20
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Rockwell Condensed", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Black
+        Me.Label4.Location = New System.Drawing.Point(79, 38)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(101, 48)
+        Me.Label4.TabIndex = 2
+        Me.Label4.Text = "Master " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Kecamatan"
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
+        Me.PictureBox5.Location = New System.Drawing.Point(5, 24)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(66, 68)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox5.TabIndex = 0
+        Me.PictureBox5.TabStop = False
+        '
+        'Panel12
+        '
+        Me.Panel12.BackColor = System.Drawing.Color.Chartreuse
+        Me.Panel12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Panel12.Controls.Add(Me.Label7)
+        Me.Panel12.Controls.Add(Me.PictureBox10)
+        Me.Panel12.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Panel12.Location = New System.Drawing.Point(389, 279)
+        Me.Panel12.Name = "Panel12"
+        Me.Panel12.Size = New System.Drawing.Size(186, 119)
+        Me.Panel12.TabIndex = 21
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Rockwell Condensed", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.Black
+        Me.Label7.Location = New System.Drawing.Point(79, 44)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(94, 48)
+        Me.Label7.TabIndex = 2
+        Me.Label7.Text = "Master " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Kelurahan"
+        '
+        'PictureBox10
+        '
+        Me.PictureBox10.Image = CType(resources.GetObject("PictureBox10.Image"), System.Drawing.Image)
+        Me.PictureBox10.Location = New System.Drawing.Point(5, 29)
+        Me.PictureBox10.Name = "PictureBox10"
+        Me.PictureBox10.Size = New System.Drawing.Size(66, 68)
+        Me.PictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox10.TabIndex = 0
+        Me.PictureBox10.TabStop = False
+        '
         'MenuUtama
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1366, 677)
+        Me.Controls.Add(Me.Panel12)
+        Me.Controls.Add(Me.Panel11)
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Panel8)
@@ -516,6 +594,12 @@ Partial Class MenuUtama
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.Panel11.ResumeLayout(False)
+        Me.Panel11.PerformLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel12.ResumeLayout(False)
+        Me.Panel12.PerformLayout()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -555,4 +639,10 @@ Partial Class MenuUtama
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents PictureBox12 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
+    Friend WithEvents Panel11 As System.Windows.Forms.Panel
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
+    Friend WithEvents Panel12 As System.Windows.Forms.Panel
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox10 As System.Windows.Forms.PictureBox
 End Class

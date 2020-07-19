@@ -37,7 +37,7 @@ Public Class Form2
             rd.Read()
             If Not rd.HasRows Then
                 rd.Close()
-                Dim sqlsave As String = "insert into pengguna values('""','" & txt_user.Text & "', '" & txt_user.Text & "', '" & ComboBox1.Text & "')"
+                Dim sqlsave As String = "insert into pengguna values('""','" & txt_user.Text & "', '" & txt_pass.Text & "', '" & ComboBox1.Text & "')"
                 cmd = New MySqlCommand(sqlsave, conn)
                 cmd.ExecuteNonQuery()
                 view()

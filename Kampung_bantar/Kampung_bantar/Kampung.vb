@@ -10,6 +10,8 @@ Public Class Kampung
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        Dim a As String = txt_kecamatan.Text.Substring(0, 6)
+        Dim b As String = txt_kelurahan.Text.Substring(0, 6)
         On Error GoTo msg
         If txt_kode.Text = "" Or txt_nama.Text = "" Then
             MsgBox("Mohon Isi Dengan Lengkap")
@@ -20,7 +22,7 @@ Public Class Kampung
             rd.Read()
             If Not rd.HasRows Then
                 rd.Close()
-                Dim sqlsave As String = "insert into kampung values('" & txt_kode.Text & "', '" & txt_nama.Text & "','" & RichTextBox1.Text & "','" & txt_kecamatan.Text & "','" & txt_kelurahan.Text & "','" & TextBox1.Text & "')"
+                Dim sqlsave As String = "insert into kampung values('" & txt_kode.Text & "', '" & txt_nama.Text & "','" & RichTextBox1.Text & "','" & a & "','" & b & "','" & TextBox1.Text & "')"
                 cmd = New MySqlCommand(sqlsave, conn)
                 cmd.ExecuteNonQuery()
                 view()
@@ -40,6 +42,24 @@ msg:    MsgBox("Opps, Something went wrong !!")
         placeholder()
         autonumber()
         view()
+        initialCombobox()
+        initialCombobox1()
+    End Sub
+    Private Sub initialCombobox()
+        cmd = New MySqlCommand("select concat(kode_kecamatan,' - ',kecamatan) as kode from kecamatan", conn)
+        rd = cmd.ExecuteReader
+        While rd.Read()
+            txt_kecamatan.Items.Add(rd("kode"))
+        End While
+        rd.Close()
+    End Sub
+    Private Sub initialCombobox1()
+        cmd = New MySqlCommand("select concat(kode_kelurahan,' - ',kelurahan) as kode from kelurahan", conn)
+        rd = cmd.ExecuteReader
+        While rd.Read()
+            txt_kelurahan.Items.Add(rd("kode"))
+        End While
+        rd.Close()
     End Sub
     Sub bersih()
         placeholder()
@@ -52,7 +72,10 @@ msg:    MsgBox("Opps, Something went wrong !!")
         RichTextBox1.Text = ""
     End Sub
     Sub view()
-        tampil(Me, "kampung", "")
+        da = New MySqlDataAdapter("select a.kode,a.nama,a.alamat,concat(b.kode_kecamatan,' - ',b.kecamatan)as kecamatan,concat(c.kode_kelurahan,' - ',c.kelurahan)as kelurahan,a.rt as RT from kampung a join kecamatan b on a.kecamatan=b.kode_kecamatan join kelurahan c on c.kode_kelurahan=a.kelurahan ", conn)
+        ds = New DataSet
+        ds.Clear()
+        da.Fill(ds, "kampung")
         dgvkampung.DataSource = (ds.Tables("kampung"))
     End Sub
 
@@ -94,13 +117,15 @@ msg:    MsgBox("Opps, Something went wrong !!")
     End Sub
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        Dim a As String = txt_kecamatan.Text.Substring(0, 6)
+        Dim b As String = txt_kelurahan.Text.Substring(0, 6)
         On Error GoTo pesan
         If txt_kode.Text = "" Or txt_nama.Text = "" Then
             MsgBox("gagal menyimpan, cek ulang")
             Exit Sub
         Else
             Dim sqledit As String = "update kampung set nama = '" & txt_nama.Text & _
-                   "',alamat = '" & RichTextBox1.Text & "',kecamatan = '" & txt_kecamatan.Text & "',kelurahan = '" & txt_kelurahan.Text & _
+                   "',alamat = '" & RichTextBox1.Text & "',kecamatan = '" & a & "',kelurahan = '" & b & _
                    "',rt = '" & TextBox1.Text & "' where kode='" & txt_kode.Text & "'"
             cmd = New MySqlCommand(sqledit, conn)
             cmd.ExecuteNonQuery()
