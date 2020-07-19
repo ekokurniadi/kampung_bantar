@@ -120,7 +120,7 @@ Public Class Rating_pencocokan
         rd.Read()
         If Not rd.HasRows Then
             rd.Close()
-            Dim sqlsave As String = "insert into rating_kecocokan values('" & txt_kode.Text & "', '" & Format(DateTimePicker1.Value, "yyyy-MM-dd") & "','input  ')"
+            Dim sqlsave As String = "insert into rating_kecocokan values('" & txt_kode.Text & "', '" & Format(DateTimePicker1.Value, "yyyy-MM-dd") & "','input')"
             cmd = New MySqlCommand(sqlsave, conn)
             cmd.ExecuteNonQuery()
         End If
@@ -146,6 +146,10 @@ Public Class Rating_pencocokan
     End Sub
 
     Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
+
+    End Sub
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
 End Class
