@@ -61,12 +61,12 @@ Partial Class Variabel_penilaian
         Me.Label12 = New System.Windows.Forms.Label
         Me.Label11 = New System.Windows.Forms.Label
         Me.Label10 = New System.Windows.Forms.Label
+        Me.TextBox1 = New System.Windows.Forms.TextBox
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel3 = New System.Windows.Forms.Panel
         Me.Label5 = New System.Windows.Forms.Label
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel
-        Me.TextBox1 = New System.Windows.Forms.TextBox
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
@@ -498,6 +498,14 @@ Partial Class Variabel_penilaian
         Me.Label10.TabIndex = 45
         Me.Label10.Text = "Variabel Penilaian"
         '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(124, 10)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(125, 22)
+        Me.TextBox1.TabIndex = 50
+        '
         'Timer1
         '
         Me.Timer1.Enabled = True
@@ -537,14 +545,6 @@ Partial Class Variabel_penilaian
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1056, 558)
         Me.Panel1.TabIndex = 28
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(124, 10)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(125, 22)
-        Me.TextBox1.TabIndex = 50
         '
         'Variabel_penilaian
         '

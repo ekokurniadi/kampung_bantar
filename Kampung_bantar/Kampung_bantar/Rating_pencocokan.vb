@@ -120,7 +120,7 @@ Public Class Rating_pencocokan
         rd.Read()
         If Not rd.HasRows Then
             rd.Close()
-            Dim sqlsave As String = "insert into rating_kecocokan values('" & txt_kode.Text & "', '" & Format(DateTimePicker1.Value, "yyyy-MM-dd") & "')"
+            Dim sqlsave As String = "insert into rating_kecocokan values('" & txt_kode.Text & "', '" & Format(DateTimePicker1.Value, "yyyy-MM-dd") & "','input  ')"
             cmd = New MySqlCommand(sqlsave, conn)
             cmd.ExecuteNonQuery()
         End If
@@ -133,7 +133,8 @@ Public Class Rating_pencocokan
         Next baris
         MsgBox("Data Berhasil disimpan")
         Normalisasi.Show()
-        Normalisasi.TextBox1.Text = txt_kode.Text
+        Normalisasi.txt_kode.Text = txt_kode.Text
+        Normalisasi.DateTimePicker1.Text = DateTimePicker1.Value
         rd.Close()
         DataGridView1.Columns.Clear()
         Call kolombaru()
@@ -142,5 +143,9 @@ Public Class Rating_pencocokan
     End Sub
     Sub bersih()
         DateTimePicker1.Value = Now
+    End Sub
+
+    Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
+
     End Sub
 End Class

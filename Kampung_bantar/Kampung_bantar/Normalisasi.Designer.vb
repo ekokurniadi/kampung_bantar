@@ -296,7 +296,6 @@ Partial Class Normalisasi
         Me.GroupBox2.Size = New System.Drawing.Size(664, 61)
         Me.GroupBox2.TabIndex = 55
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "GroupBox2"
         '
         'Label4
         '
@@ -305,9 +304,9 @@ Partial Class Normalisasi
         Me.Label4.ForeColor = System.Drawing.Color.Black
         Me.Label4.Location = New System.Drawing.Point(11, 17)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(139, 15)
+        Me.Label4.Size = New System.Drawing.Size(105, 15)
         Me.Label4.TabIndex = 0
-        Me.Label4.Text = "Kode Rating Kecocokan"
+        Me.Label4.Text = "Kode Normalisasi"
         '
         'Label6
         '
@@ -323,7 +322,7 @@ Partial Class Normalisasi
         'txt_kode
         '
         Me.txt_kode.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txt_kode.Location = New System.Drawing.Point(156, 17)
+        Me.txt_kode.Location = New System.Drawing.Point(122, 17)
         Me.txt_kode.Name = "txt_kode"
         Me.txt_kode.Size = New System.Drawing.Size(160, 22)
         Me.txt_kode.TabIndex = 1
@@ -363,7 +362,7 @@ Partial Class Normalisasi
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Location = New System.Drawing.Point(29, 292)
         Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(677, 124)
+        Me.DataGridView2.Size = New System.Drawing.Size(677, 108)
         Me.DataGridView2.TabIndex = 57
         '
         'Label8
@@ -387,6 +386,7 @@ Partial Class Normalisasi
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Name = "Normalisasi"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Normalisasi"
         Me.Panel1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
