@@ -22,7 +22,7 @@ Public Class Kampung
             rd.Read()
             If Not rd.HasRows Then
                 rd.Close()
-                Dim sqlsave As String = "insert into kampung values('" & txt_kode.Text & "', '" & txt_nama.Text & "','" & RichTextBox1.Text & "','" & a & "','" & b & "','" & TextBox1.Text & "')"
+                Dim sqlsave As String = "insert into kampung values('" & txt_kode.Text & "', '" & txt_nama.Text & "','" & RichTextBox1.Text & "','" & a & "','" & b & "','" & TextBox1.Text & "','" & ComboBox1.Text & "')"
                 cmd = New MySqlCommand(sqlsave, conn)
                 cmd.ExecuteNonQuery()
                 view()
@@ -70,10 +70,10 @@ msg:    MsgBox("Opps, Something went wrong !!")
         txt_kelurahan.Text = ""
         TextBox1.Text = ""
         RichTextBox1.Text = ""
-
+        ComboBox1.Text = ""
     End Sub
     Sub view()
-        da = New MySqlDataAdapter("select a.kode,a.nama,a.alamat,concat(b.kode_kecamatan,' - ',b.kecamatan)as kecamatan,concat(c.kode_kelurahan,' - ',c.kelurahan)as kelurahan,a.rt as RT from kampung a join kecamatan b on a.kecamatan=b.kode_kecamatan join kelurahan c on c.kode_kelurahan=a.kelurahan ", conn)
+        da = New MySqlDataAdapter("select a.kode,a.nama,a.alamat,concat(b.kode_kecamatan,' - ',b.kecamatan)as kecamatan,concat(c.kode_kelurahan,' - ',c.kelurahan)as kelurahan,a.rt as RT,a.kategori from kampung a join kecamatan b on a.kecamatan=b.kode_kecamatan join kelurahan c on c.kode_kelurahan=a.kelurahan ", conn)
         ds = New DataSet
         ds.Clear()
         da.Fill(ds, "kampung")
@@ -105,6 +105,7 @@ msg:    MsgBox("Opps, Something went wrong !!")
         SetWatermark(txt_nama, "Nama Kampung")
         SetWatermark(txt_kecamatan, "Kecamatan")
         SetWatermark(txt_kelurahan, "Kelurahan")
+        SetWatermark(ComboBox1, "Kategori")
         SetWatermark(TextBox1, "RT")
         SetWatermark(txt_cari, "Search Data")
     End Sub
@@ -127,7 +128,7 @@ msg:    MsgBox("Opps, Something went wrong !!")
         Else
             Dim sqledit As String = "update kampung set nama = '" & txt_nama.Text & _
                    "',alamat = '" & RichTextBox1.Text & "',kecamatan = '" & a & "',kelurahan = '" & b & _
-                   "',rt = '" & TextBox1.Text & "' where kode='" & txt_kode.Text & "'"
+                   "',rt = '" & TextBox1.Text & "',kategori = '" & ComboBox1.Text & "' where kode='" & txt_kode.Text & "'"
             cmd = New MySqlCommand(sqledit, conn)
             cmd.ExecuteNonQuery()
             MsgBox("berhasil diubah")
@@ -165,6 +166,7 @@ pesan:  MsgBox("ada kesalahan, mohon ulangi")
         txt_kecamatan.Text = dgvkampung.SelectedCells(3).Value
         txt_kelurahan.Text = dgvkampung.SelectedCells(4).Value
         TextBox1.Text = dgvkampung.SelectedCells(5).Value
+        ComboBox1.Text = dgvkampung.SelectedCells(6).Value
     End Sub
 
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click

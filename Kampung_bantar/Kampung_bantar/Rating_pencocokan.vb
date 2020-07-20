@@ -2,17 +2,30 @@
 Public Class Rating_pencocokan
 
     Private Sub Rating_pencocokan_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        kolombaru()
         autonumber()
+        kolombaru()
+        initialCombobox()
     End Sub
     Sub atur_kolom()
         DataGridView1.Columns(0).Width = 150
-        DataGridView1.Columns(1).Width = 600
+        DataGridView1.Columns(1).Width = 550
         DataGridView1.Columns(2).Width = 400
-        DataGridView1.Columns(3).Width = 500
+        DataGridView1.Columns(3).Width = 550
+        DataGridView1.Columns(4).Width = 150
+        DataGridView1.Columns(2).Visible = False
     End Sub
+
+    Private Sub initialCombobox()
+        cmd = New MySqlCommand("SELECT concat(kode_alternatif,' - ',nama_kampung) as kode_alternatif from  alternatif", conn)
+        rd = cmd.ExecuteReader
+        While rd.Read()
+            ComboBox1.Items.Add(rd("kode_alternatif"))
+        End While
+        rd.Close()
+    End Sub
+
     Sub autonumber()
-        txt_kode.ReadOnly = True
+        txt_kode.ReadOnly = False
         Call koneksinya()
         cmd = New MySqlCommand("select * from rating_kecocokan order by kode_rating_kecocokan desc", conn)
         rd = cmd.ExecuteReader
@@ -34,6 +47,11 @@ Public Class Rating_pencocokan
     Sub kolombaru()
 
         Call list_alternatif()
+        'Dim chk As New DataGridViewCheckBoxColumn()
+        'DataGridView1.Columns.Add(chk)
+        'chk.HeaderText = "Pilih"
+        'chk.Name = "chk"
+        'DataGridView1.Rows(0).Cells(0).Value = False
         Call list_kategori()
         DataGridView1.Columns.Add("Variabel Penilaian", "Variabel Penilaian")
         Call list_kriteria()
@@ -43,6 +61,7 @@ Public Class Rating_pencocokan
         DataGridView1.Columns(5).Visible = False
         DataGridView1.Columns(6).Visible = False
         atur_kolom()
+        view()
     End Sub
 
     Sub list_kriteria()
@@ -82,7 +101,7 @@ Public Class Rating_pencocokan
         cols.DisplayMember = "kode_alternatif"
         DataGridView1.Columns.Add(cols)
         cols.HeaderText = "Pilih Peserta"
-
+        DataGridView1.Columns(0).Visible = False
     End Sub
     Private Sub DataGridView1_CellEndEdit(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellEndEdit
         On Error Resume Next
@@ -118,26 +137,10 @@ Public Class Rating_pencocokan
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
-        If txt_kode.Text = "" Or DateTimePicker1.Text = "" Then
-            MsgBox("Data belum lengkap")
-            Exit Sub
-        End If
-        cmd = New MySqlCommand("select * from rating_kecocokan where kode_rating_kecocokan='" & txt_kode.Text & "'", conn)
-        rd = cmd.ExecuteReader
-        rd.Read()
-        If Not rd.HasRows Then
-            rd.Close()
-            Dim sqlsave As String = "insert into rating_kecocokan values('" & txt_kode.Text & "', '" & Format(DateTimePicker1.Value, "yyyy-MM-dd") & "','input')"
-            cmd = New MySqlCommand(sqlsave, conn)
-            cmd.ExecuteNonQuery()
-        End If
-        For baris As Integer = 0 To DataGridView1.Rows.Count - 2
-            'simpan ke tabel detail
-            Dim simpanmaster As String = "insert into rating_kecocokan_detail values('""','" & txt_kode.Text & "','" & DataGridView1.Rows(baris).Cells(0).Value.Substring(0, 6) & "','" & DataGridView1.Rows(baris).Cells(3).Value.Substring(0, 6) & "','" & DataGridView1.Rows(baris).Cells(4).Value & "','" & DataGridView1.Rows(baris).Cells(5).Value & "','" & DataGridView1.Rows(baris).Cells(6).Value & "')"
-            cmd = New MySqlCommand(simpanmaster, conn)
-            cmd.ExecuteNonQuery()
-            rd.Close()
-        Next baris
+        simpan()
+    End Sub
+
+    Sub simpan()
         MsgBox("Data Berhasil disimpan")
         Normalisasi.Show()
         Normalisasi.txt_kode.Text = txt_kode.Text
@@ -147,6 +150,15 @@ Public Class Rating_pencocokan
         Call kolombaru()
         Call autonumber()
         Call bersih()
+    End Sub
+
+    Sub view()
+        da = New MySqlDataAdapter("select c.kode_rating_kecocokan,b.kode_alternatif,d.variabel_penilaian,d.kriteria,a.nama_kampung,b.bobot from rating_kecocokan_detail b join alternatif a on b.kode_alternatif=a.kode_alternatif join rating_kecocokan c on b.kode_rating_kecocokan=c.kode_rating_kecocokan join kriteria d on b.relasi_kriteria =d.relasi where c.kode_rating_kecocokan = '" & txt_kode.Text & "' and c.status ='input' ORDER BY b.kode_alternatif", conn)
+        ds = New DataSet
+        ds.Clear()
+        da.Fill(ds, "rating_kecocokan_detail")
+        DataGridView2.DataSource = (ds.Tables("rating_kecocokan_detail"))
+        DataGridView2.Columns(0).Visible = False
     End Sub
     Sub bersih()
         DateTimePicker1.Value = Now
@@ -162,5 +174,31 @@ Public Class Rating_pencocokan
         Call kolombaru()
         Call autonumber()
         Call bersih()
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        If txt_kode.Text = "" Or DateTimePicker1.Text = "" Then
+            MsgBox("Data belum lengkap")
+            Exit Sub
+        End If
+        Dim sqlsave As String = "insert into rating_kecocokan values('" & txt_kode.Text & "', '" & Format(DateTimePicker1.Value, "yyyy-MM-dd") & "','input','""')"
+        cmd = New MySqlCommand(sqlsave, conn)
+        cmd.ExecuteNonQuery()
+        For baris As Integer = 0 To DataGridView1.Rows.Count - 2
+            'simpan ke tabel detail
+            Dim simpanmaster As String = "insert into rating_kecocokan_detail values('""','" & txt_kode.Text & "','" & ComboBox1.Text.Substring(0, 6) & "','" & DataGridView1.Rows(baris).Cells(3).Value.Substring(0, 6) & "','" & DataGridView1.Rows(baris).Cells(4).Value & "','" & DataGridView1.Rows(baris).Cells(5).Value & "','" & DataGridView1.Rows(baris).Cells(6).Value & "')"
+            cmd = New MySqlCommand(simpanmaster, conn)
+            cmd.ExecuteNonQuery()
+            rd.Close()
+        Next baris
+        MsgBox("Data Berhasil disimpan")
+        rd.Close()
+        DataGridView1.Columns.Clear()
+        Call kolombaru()
+        Call bersih()
+    End Sub
+
+    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
+        Label17.Text = TimeOfDay
     End Sub
 End Class
