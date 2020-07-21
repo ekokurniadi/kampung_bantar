@@ -113,7 +113,7 @@ Partial Class MenuUtama
         Me.Label8.ForeColor = System.Drawing.Color.Black
         Me.Label8.Location = New System.Drawing.Point(91, 60)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(90, 24)
+        Me.Label8.Size = New System.Drawing.Size(71, 19)
         Me.Label8.TabIndex = 6
         Me.Label8.Text = "Penilaian"
         '
@@ -134,7 +134,7 @@ Partial Class MenuUtama
         Me.Label12.ForeColor = System.Drawing.Color.Black
         Me.Label12.Location = New System.Drawing.Point(82, 41)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(111, 44)
+        Me.Label12.Size = New System.Drawing.Size(88, 36)
         Me.Label12.TabIndex = 12
         Me.Label12.Text = "Perhitungan " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Nilai"
         '
@@ -157,7 +157,7 @@ Partial Class MenuUtama
         Me.Label18.ForeColor = System.Drawing.Color.Black
         Me.Label18.Location = New System.Drawing.Point(91, 51)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(74, 24)
+        Me.Label18.Size = New System.Drawing.Size(59, 19)
         Me.Label18.TabIndex = 10
         Me.Label18.Text = "LOGOUT"
         '
@@ -168,7 +168,7 @@ Partial Class MenuUtama
         Me.Label9.ForeColor = System.Drawing.Color.Black
         Me.Label9.Location = New System.Drawing.Point(91, 41)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(79, 24)
+        Me.Label9.Size = New System.Drawing.Size(65, 19)
         Me.Label9.TabIndex = 5
         Me.Label9.Text = "Kategori"
         '
@@ -179,7 +179,7 @@ Partial Class MenuUtama
         Me.Label13.ForeColor = System.Drawing.Color.Black
         Me.Label13.Location = New System.Drawing.Point(91, 60)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(63, 24)
+        Me.Label13.Size = New System.Drawing.Size(52, 19)
         Me.Label13.TabIndex = 5
         Me.Label13.Text = "Report"
         '
@@ -200,7 +200,7 @@ Partial Class MenuUtama
         Me.Label14.ForeColor = System.Drawing.Color.Black
         Me.Label14.Location = New System.Drawing.Point(91, 41)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(64, 24)
+        Me.Label14.Size = New System.Drawing.Size(53, 19)
         Me.Label14.TabIndex = 4
         Me.Label14.Text = "Master"
         '
@@ -211,7 +211,7 @@ Partial Class MenuUtama
         Me.Label11.ForeColor = System.Drawing.Color.Black
         Me.Label11.Location = New System.Drawing.Point(91, 20)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(97, 120)
+        Me.Label11.Size = New System.Drawing.Size(76, 95)
         Me.Label11.TabIndex = 7
         Me.Label11.Text = "Variabel " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Penilaian " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "&& " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Kriteria" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -223,7 +223,7 @@ Partial Class MenuUtama
         Me.Label17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Label17.Location = New System.Drawing.Point(1148, 41)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(146, 39)
+        Me.Label17.Size = New System.Drawing.Size(117, 31)
         Me.Label17.TabIndex = 7
         Me.Label17.Text = "Label17"
         '
@@ -234,7 +234,7 @@ Partial Class MenuUtama
         Me.Label2.ForeColor = System.Drawing.Color.Black
         Me.Label2.Location = New System.Drawing.Point(91, 60)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 24)
+        Me.Label2.Size = New System.Drawing.Size(57, 19)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Peserta"
         '
@@ -258,7 +258,7 @@ Partial Class MenuUtama
         Me.Label15.ForeColor = System.Drawing.Color.Black
         Me.Label15.Location = New System.Drawing.Point(91, 60)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(87, 24)
+        Me.Label15.Size = New System.Drawing.Size(71, 19)
         Me.Label15.TabIndex = 8
         Me.Label15.Text = "Data User"
         '
@@ -279,7 +279,7 @@ Partial Class MenuUtama
         Me.Label16.ForeColor = System.Drawing.Color.Black
         Me.Label16.Location = New System.Drawing.Point(91, 41)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(64, 24)
+        Me.Label16.Size = New System.Drawing.Size(53, 19)
         Me.Label16.TabIndex = 7
         Me.Label16.Text = "Master"
         '
@@ -290,7 +290,7 @@ Partial Class MenuUtama
         Me.Label5.ForeColor = System.Drawing.SystemColors.InactiveBorder
         Me.Label5.Location = New System.Drawing.Point(479, 14)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(488, 24)
+        Me.Label5.Size = New System.Drawing.Size(388, 19)
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "APLIKASI PENILAIAN KAMPUNG BANTAR KOTA JAMBI     "
         '
@@ -301,7 +301,7 @@ Partial Class MenuUtama
         Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.Location = New System.Drawing.Point(91, 41)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(64, 24)
+        Me.Label1.Size = New System.Drawing.Size(53, 19)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Master"
         '
@@ -347,7 +347,7 @@ Partial Class MenuUtama
         Me.Label6.ForeColor = System.Drawing.Color.Black
         Me.Label6.Location = New System.Drawing.Point(91, 41)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(88, 24)
+        Me.Label6.Size = New System.Drawing.Size(71, 19)
         Me.Label6.TabIndex = 4
         Me.Label6.Text = "Alternatif"
         '
@@ -380,7 +380,7 @@ Partial Class MenuUtama
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(109, 41)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(968, 35)
+        Me.Label3.Size = New System.Drawing.Size(779, 29)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Sistem Pendukung Keputusan Pemenang Lomba Kampung Bantar Kota Jambi"
         '
@@ -497,7 +497,7 @@ Partial Class MenuUtama
         Me.Label4.ForeColor = System.Drawing.Color.Black
         Me.Label4.Location = New System.Drawing.Point(79, 38)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(101, 48)
+        Me.Label4.Size = New System.Drawing.Size(81, 38)
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "Master " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Kecamatan"
         '
@@ -530,7 +530,7 @@ Partial Class MenuUtama
         Me.Label7.ForeColor = System.Drawing.Color.Black
         Me.Label7.Location = New System.Drawing.Point(79, 44)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(94, 48)
+        Me.Label7.Size = New System.Drawing.Size(75, 38)
         Me.Label7.TabIndex = 2
         Me.Label7.Text = "Master " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Kelurahan"
         '

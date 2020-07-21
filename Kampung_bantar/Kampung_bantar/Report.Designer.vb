@@ -97,11 +97,11 @@ Partial Class Report
         '
         Me.GroupBox1.Controls.Add(Me.Button3)
         Me.GroupBox1.Controls.Add(Me.Button2)
-        Me.GroupBox1.Controls.Add(Me.Button4)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.ComboBox1)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.Button4)
         Me.GroupBox1.Location = New System.Drawing.Point(40, 94)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(333, 136)
@@ -145,7 +145,7 @@ Partial Class Report
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.Location = New System.Drawing.Point(202, 54)
+        Me.Button4.Location = New System.Drawing.Point(70, 54)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(113, 27)
         Me.Button4.TabIndex = 11
@@ -158,18 +158,18 @@ Partial Class Report
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(70, 87)
+        Me.Button2.Location = New System.Drawing.Point(201, 54)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(126, 27)
+        Me.Button2.Size = New System.Drawing.Size(114, 27)
         Me.Button2.TabIndex = 12
         Me.Button2.Text = "Clear"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(202, 87)
+        Me.Button3.Location = New System.Drawing.Point(70, 87)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(113, 27)
+        Me.Button3.Size = New System.Drawing.Size(245, 27)
         Me.Button3.TabIndex = 13
         Me.Button3.Text = "Exit"
         Me.Button3.UseVisualStyleBackColor = True
