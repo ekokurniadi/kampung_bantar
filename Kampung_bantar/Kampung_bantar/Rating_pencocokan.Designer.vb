@@ -35,33 +35,33 @@ Partial Class Rating_pencocokan
         Me.txt_kode = New System.Windows.Forms.TextBox
         Me.Label1 = New System.Windows.Forms.Label
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView
+        Me.Button2 = New System.Windows.Forms.Button
+        Me.Button7 = New System.Windows.Forms.Button
+        Me.Button4 = New System.Windows.Forms.Button
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox
+        Me.Button1 = New System.Windows.Forms.Button
         Me.GR = New System.Windows.Forms.GroupBox
+        Me.Label6 = New System.Windows.Forms.Label
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label4 = New System.Windows.Forms.Label
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView
-        Me.Button2 = New System.Windows.Forms.Button
         Me.PictureBox1 = New System.Windows.Forms.PictureBox
         Me.Panel4 = New System.Windows.Forms.Panel
         Me.Panel1 = New System.Windows.Forms.Panel
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox
-        Me.Label6 = New System.Windows.Forms.Label
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox
-        Me.Button7 = New System.Windows.Forms.Button
-        Me.Button4 = New System.Windows.Forms.Button
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        Me.GR.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
+        Me.GR.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -174,56 +174,13 @@ Partial Class Rating_pencocokan
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         '
-        'GR
+        'DataGridView2
         '
-        Me.GR.Controls.Add(Me.Label6)
-        Me.GR.Controls.Add(Me.ComboBox1)
-        Me.GR.Controls.Add(Me.Label2)
-        Me.GR.Controls.Add(Me.Label4)
-        Me.GR.Controls.Add(Me.txt_kode)
-        Me.GR.Controls.Add(Me.DateTimePicker1)
-        Me.GR.Location = New System.Drawing.Point(13, 5)
-        Me.GR.Name = "GR"
-        Me.GR.Size = New System.Drawing.Size(664, 101)
-        Me.GR.TabIndex = 54
-        Me.GR.TabStop = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(11, 17)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(139, 15)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Kode Rating Kecocokan"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(333, 17)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(52, 15)
-        Me.Label4.TabIndex = 0
-        Me.Label4.Text = "Tanggal"
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(421, 17)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(182, 20)
-        Me.DateTimePicker1.TabIndex = 50
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(15, 129)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(1279, 146)
-        Me.DataGridView1.TabIndex = 51
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Location = New System.Drawing.Point(13, 400)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(713, 104)
+        Me.DataGridView2.TabIndex = 56
         '
         'Button2
         '
@@ -239,65 +196,6 @@ Partial Class Rating_pencocokan
         Me.Button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         Me.Button2.UseVisualStyleBackColor = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(14, 1)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(43, 43)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
-        '
-        'Panel4
-        '
-        Me.Panel4.BackColor = System.Drawing.Color.DarkBlue
-        Me.Panel4.Controls.Add(Me.PictureBox1)
-        Me.Panel4.Controls.Add(Me.Label1)
-        Me.Panel4.Location = New System.Drawing.Point(1, 1)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(1353, 46)
-        Me.Panel4.TabIndex = 1
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.Gray
-        Me.Panel1.Controls.Add(Me.GroupBox1)
-        Me.Panel1.Controls.Add(Me.Panel4)
-        Me.Panel1.Location = New System.Drawing.Point(7, 83)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1354, 558)
-        Me.Panel1.TabIndex = 31
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(156, 61)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(447, 21)
-        Me.ComboBox1.TabIndex = 51
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(67, 61)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(76, 15)
-        Me.Label6.TabIndex = 52
-        Me.Label6.Text = "Pilih Peserta"
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.Button1)
-        Me.GroupBox2.Location = New System.Drawing.Point(11, 108)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(1307, 286)
-        Me.GroupBox2.TabIndex = 55
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Detail Penilaian"
         '
         'Button7
         '
@@ -329,6 +227,24 @@ Partial Class Rating_pencocokan
         Me.Button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         Me.Button4.UseVisualStyleBackColor = False
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(15, 129)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(1279, 146)
+        Me.DataGridView1.TabIndex = 51
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.Button1)
+        Me.GroupBox2.Location = New System.Drawing.Point(11, 108)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(1307, 286)
+        Me.GroupBox2.TabIndex = 55
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Detail Penilaian"
+        '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.White
@@ -344,13 +260,97 @@ Partial Class Rating_pencocokan
         Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'DataGridView2
+        'GR
         '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(13, 400)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(713, 104)
-        Me.DataGridView2.TabIndex = 56
+        Me.GR.Controls.Add(Me.Label6)
+        Me.GR.Controls.Add(Me.ComboBox1)
+        Me.GR.Controls.Add(Me.Label2)
+        Me.GR.Controls.Add(Me.Label4)
+        Me.GR.Controls.Add(Me.txt_kode)
+        Me.GR.Controls.Add(Me.DateTimePicker1)
+        Me.GR.Location = New System.Drawing.Point(13, 5)
+        Me.GR.Name = "GR"
+        Me.GR.Size = New System.Drawing.Size(664, 101)
+        Me.GR.TabIndex = 54
+        Me.GR.TabStop = False
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Black
+        Me.Label6.Location = New System.Drawing.Point(67, 61)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(76, 15)
+        Me.Label6.TabIndex = 52
+        Me.Label6.Text = "Pilih Peserta"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(156, 61)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(447, 21)
+        Me.ComboBox1.TabIndex = 51
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(11, 17)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(139, 15)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Kode Rating Kecocokan"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Black
+        Me.Label4.Location = New System.Drawing.Point(333, 17)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(52, 15)
+        Me.Label4.TabIndex = 0
+        Me.Label4.Text = "Tanggal"
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(421, 17)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(182, 20)
+        Me.DateTimePicker1.TabIndex = 50
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(14, 1)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(43, 43)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.DarkBlue
+        Me.Panel4.Controls.Add(Me.PictureBox1)
+        Me.Panel4.Controls.Add(Me.Label1)
+        Me.Panel4.Location = New System.Drawing.Point(1, 1)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(1353, 46)
+        Me.Panel4.TabIndex = 1
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Gray
+        Me.Panel1.Controls.Add(Me.GroupBox1)
+        Me.Panel1.Controls.Add(Me.Panel4)
+        Me.Panel1.Location = New System.Drawing.Point(7, 83)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1354, 558)
+        Me.Panel1.TabIndex = 31
         '
         'Rating_pencocokan
         '
@@ -370,15 +370,15 @@ Partial Class Rating_pencocokan
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
         Me.GR.ResumeLayout(False)
         Me.GR.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
         Me.Panel1.ResumeLayout(False)
-        Me.GroupBox2.ResumeLayout(False)
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

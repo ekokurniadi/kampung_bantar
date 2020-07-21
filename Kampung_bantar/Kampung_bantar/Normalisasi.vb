@@ -78,13 +78,19 @@ Public Class Normalisasi
             rd.Close()
         Next baris
         MsgBox("Data Berhasil disimpan")
+        cetak()
         rd.Close()
         DataGridView1.Columns.Clear()
         DataGridView2.Columns.Clear()
         txt_kode.Clear()
 
     End Sub
+    Sub cetak()
+        Dim id As String = txt_kode.Text
+        Dim link As String = "http://127.0.0.1/kampung_bantar/laporan_pdf/cetak_hasil_penilaian/"
+        System.Diagnostics.Process.Start(link + id)
 
+    End Sub
     Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub

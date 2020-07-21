@@ -147,6 +147,7 @@ Public Class Rating_pencocokan
         Normalisasi.DateTimePicker1.Text = DateTimePicker1.Value
         rd.Close()
         DataGridView1.Columns.Clear()
+        DataGridView2.Columns.Clear()
         Call kolombaru()
         Call autonumber()
         Call bersih()
@@ -191,7 +192,7 @@ Public Class Rating_pencocokan
             cmd.ExecuteNonQuery()
             rd.Close()
         Next baris
-        MsgBox("Data Berhasil disimpan")
+        MsgBox("Data Berhasil ditambahkan")
         rd.Close()
         DataGridView1.Columns.Clear()
         Call kolombaru()
@@ -200,5 +201,9 @@ Public Class Rating_pencocokan
 
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
         Label17.Text = TimeOfDay
+    End Sub
+
+    Private Sub DataGridView2_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
+
     End Sub
 End Class

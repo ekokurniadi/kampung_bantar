@@ -18,3 +18,4 @@ D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Debug\
 D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Debug\Kampung_bantar.Form2.resources
 D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Debug\Kampung_bantar.Kecamatan.resources
 D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Debug\Kampung_bantar.Kelurahan.resources
+D:\Projek Skripsi VB 2020\KampungBantar\Kampung_bantar\Kampung_bantar\obj\Debug\Kampung_bantar.Report.resources
