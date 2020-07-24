@@ -35,4 +35,9 @@ Public Class Report
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         Me.Close()
     End Sub
+
+    Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
+        Dim link As String = "http://127.0.0.1/kampung_bantar/laporan_pdf/download_peserta/"
+        System.Diagnostics.Process.Start(link)
+    End Sub
 End Class

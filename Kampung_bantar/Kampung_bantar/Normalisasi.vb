@@ -99,4 +99,8 @@ Public Class Normalisasi
         Me.Close()
         MenuUtama.Show()
     End Sub
+
+    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
+        Label17.Text = TimeOfDay
+    End Sub
 End Class
